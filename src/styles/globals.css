@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+@theme inline {
+    --font-primary: 'Bricolage Grotesque', sans-serif;
+    --font-lexend: 'Lexend', sans-serif; /* This is for the logo lol it looks cool */
+    --font-text: 'Inter', sans-serif;
+    --font-headings: 'Poppins', sans-serif;
+    --color-headings: #2d2d2d;
+}
+
+/* Tailwind-compatible custom scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: none;
+    background-color: #5b21b6;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #8b5cf6;
+}
