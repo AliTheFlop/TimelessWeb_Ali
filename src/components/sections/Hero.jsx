@@ -10,14 +10,13 @@ export default function HeroSection() {
                     <div className="text-center lg:text-left space-y-8">
                         <div className="space-y-6">
                             <h1 className="text-4xl md:text-5xl xl:text-6xl font-primary font-bold leading-tight">
-                                Transform Your Online Presence with{" "}
+                                Fast Websites That{" "}
                                 <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                                    Professional Web Design
+                                    Look Good
                                 </span>
                             </h1>
                             <p className="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
-                                We create stunning, fast-loading websites that help your business stand out 
-                                and convert visitors into loyal customers.
+                                We build websites that load quickly and look great on any device. No fuss, no jargon - just results.
                             </p>
                         </div>
 
@@ -27,7 +26,7 @@ export default function HeroSection() {
                                 className="group text-base px-8 py-4"
                                 fullWidth={false}
                             >
-                                Get Started
+                                Start Your Project
                                 <ArrowRight className="ml-2 w-4 h-4 inline-block group-hover:translate-x-1 transition-transform" />
                             </Button>
                             <Button
@@ -36,24 +35,24 @@ export default function HeroSection() {
                                 className="text-base px-8 py-4"
                                 fullWidth={false}
                             >
-                                View Our Work
+                                See Our Work
                             </Button>
                         </div>
 
                         {/* Trust Indicators */}
                         <div className="pt-8 border-t border-gray-100">
-                            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center justify-center">
+                            <div className="grid grid-cols-3 gap-6 items-center">
                                 <div className="text-center">
-                                    <div className="font-bold text-2xl text-purple-600">100+</div>
-                                    <div className="text-sm text-gray-600">Projects Completed</div>
+                                    <div className="font-bold text-2xl text-purple-600">24hr</div>
+                                    <div className="text-sm text-gray-600">Turnaround</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="font-bold text-2xl text-purple-600">24/7</div>
-                                    <div className="text-sm text-gray-600">Support Available</div>
+                                    <div className="font-bold text-2xl text-purple-600">100%</div>
+                                    <div className="text-sm text-gray-600">Satisfaction</div>
                                 </div>
-                                <div className="text-center col-span-2 md:col-span-1">
+                                <div className="text-center">
                                     <div className="font-bold text-2xl text-purple-600">5★</div>
-                                    <div className="text-sm text-gray-600">Customer Rating</div>
+                                    <div className="text-sm text-gray-600">Rated</div>
                                 </div>
                             </div>
                         </div>
