@@ -3,58 +3,75 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
     return (
-        <section className="relative w-full min-h-[90vh] flex items-center bg-gradient-to-b from-purple-50 to-white">
-            <div className="absolute inset-0 bg-grid-pattern opacity-[0.015]" />
-
-            <div className="container mx-auto max-w-[80%] px-4 py-16 md:py-24 relative">
-                <div className="flex flex-col lg:flex-row items-center gap-16">
-                    {/* Content Side */}
-                    <div className="flex-1 space-y-8">
+        <section className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-b from-purple-50 via-white to-white py-20 lg:py-0">
+            <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+                    {/* Content */}
+                    <div className="text-center lg:text-left space-y-8">
                         <div className="space-y-6">
-                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-primary font-semibold tracking-tight leading-[1.1]">
-                                Get{" "}
-                                <span className="bg-gradient-to-r from-purple-600 to-blue-500 bg-clip-text text-transparent">
-                                    20% OFF
-                                </span>{" "}
-                                Your First Order!
+                            <h1 className="text-4xl md:text-5xl xl:text-6xl font-primary font-bold leading-tight">
+                                Transform Your Online Presence with{" "}
+                                <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+                                    Professional Web Design
+                                </span>
                             </h1>
-
-                            <p className="text-lg text-gray-600 max-w-xl">
-                                Visitors judge your business based on your
-                                website. Let us make it something fast and
-                                beautiful that converts them into customers.
+                            <p className="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
+                                We create stunning, fast-loading websites that help your business stand out 
+                                and convert visitors into loyal customers.
                             </p>
                         </div>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <Button
                                 href="#contact-form"
-                                className="group inline-flex items-center justify-center text-base"
+                                className="group text-base px-8 py-4"
+                                fullWidth={false}
                             >
-                                Start Your Project
-                                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-200" />
+                                Get Started
+                                <ArrowRight className="ml-2 w-4 h-4 inline-block group-hover:translate-x-1 transition-transform" />
                             </Button>
                             <Button
                                 href="/work"
                                 variant="secondary"
-                                className="inline-flex items-center justify-center text-base"
+                                className="text-base px-8 py-4"
+                                fullWidth={false}
                             >
                                 View Our Work
                             </Button>
                         </div>
+
+                        {/* Trust Indicators */}
+                        <div className="pt-8 border-t border-gray-100">
+                            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 items-center justify-center">
+                                <div className="text-center">
+                                    <div className="font-bold text-2xl text-purple-600">100+</div>
+                                    <div className="text-sm text-gray-600">Projects Completed</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="font-bold text-2xl text-purple-600">24/7</div>
+                                    <div className="text-sm text-gray-600">Support Available</div>
+                                </div>
+                                <div className="text-center col-span-2 md:col-span-1">
+                                    <div className="font-bold text-2xl text-purple-600">5★</div>
+                                    <div className="text-sm text-gray-600">Customer Rating</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Image Side */}
-                    <div className="flex-1 relative">
-                        <div className="relative rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-500">
-                            <div className="absolute inset-0 pointer-events-none" />
-                            <img
-                                src="/homepage/illustration.svg"
-                                alt="Modern website design showcase"
-                                className="w-full h-auto object-cover"
-                                style={{ aspectRatio: "1:1" }}
-                                loading="eager"
-                            />
+                    {/* Image */}
+                    <div className="relative order-first lg:order-last">
+                        <div className="relative w-full max-w-2xl mx-auto">
+                            <div className="aspect-square relative z-10">
+                                <img
+                                    src="/homepage/illustration.svg"
+                                    alt="Web Design Illustration"
+                                    className="w-full h-full object-contain"
+                                    loading="eager"
+                                />
+                            </div>
+                            {/* Background Decoration */}
+                            <div className="absolute -inset-4 bg-gradient-to-r from-purple-100 to-blue-100 rounded-full blur-3xl opacity-30 -z-10" />
                         </div>
                     </div>
                 </div>
