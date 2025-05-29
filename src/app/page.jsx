@@ -5,7 +5,8 @@ import Benefits from "@/components/sections/Benefits";
 export default function Home() {
     return (
         <>
-            <HeroSection /> <OurWork /> <Benefits />
+            <HeroSection /> <Benefits />
+            <OurWork />
         </>
     );
 }

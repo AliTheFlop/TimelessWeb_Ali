@@ -35,10 +35,10 @@ export default function OurWork() {
             <div className="w-full max-w-[80%] flex flex-col items-center h-auto mb-32">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2 mb-10">
-                        <h2 className="font-primary text-4xl font-medium">
+                        <h2 className="font-primary text-3xl lg:text-4xl font-medium text-center lg:text-left">
                             Your Website Is Our Responsibility
                         </h2>
-                        <p className="font-text text-lg">
+                        <p className="font-text text-lg text-center lg:text-left">
                             We manage everything so you never have to think
                             about it, here&apos;s some clients we manage:
                         </p>

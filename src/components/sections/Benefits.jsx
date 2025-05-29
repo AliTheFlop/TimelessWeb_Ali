@@ -6,24 +6,23 @@ export default function Benefits() {
             <div className="w-full max-w-[80%] flex flex-col items-center h-auto mb-32">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2 mb-10">
-                        <h2 className="font-primary text-4xl font-medium">
+                        <h2 className="font-primary text-3xl lg:text-4xl font-medium text-center lg:text-left">
                             We Save You Time & Effort
                         </h2>
-                        <p className="font-text text-lg">
+                        <p className="font-text text-lg text-center lg:text-left">
                             There&apos;s no need to learn technical mumbo jumbo.
                             We&apos;re here to do it for you.
                         </p>
                     </div>
                     <div className="grid grid-cols-1 gap-y-12 grid-rows-1 gap-x-4 lg:gap-x-12 xl:grid-cols-3 lg:grid-cols-2">
-                        <div className="border-purple-600 border flex flex-col items-center justify-center px-8 py-12">
+                        <div className="border-purple-600 border flex flex-col items-center justify-center px-8 py-12 min-h-80">
                             <AppWindowMac className="w-12 h-12 text-purple-600" />
                             <h3 className="font-medium font-headings text-2xl text-center mt-2">
                                 Hosting
                             </h3>
-                            <p className="font-text text-center mt-auto pt-4">
-                                No recycled templates or lazy shortcuts, every
-                                design is crafted specifically for your audience
-                                and brand.
+                            <p className="font-text text-center  pt-4">
+                                Your website will be online 24/7 with a 99%
+                                uptime guarantee.
                             </p>
                         </div>
                         <div className="border-purple-600 border flex flex-col items-center justify-center px-8 py-12">
@@ -31,7 +30,7 @@ export default function Benefits() {
                             <h3 className="font-medium font-headings text-2xl text-center mt-2">
                                 Maintenance
                             </h3>
-                            <p className="font-text text-center mt-auto">
+                            <p className="font-text text-center pt-4">
                                 You run your business, we handle the website.
                                 Includes content & security updates.
                             </p>
@@ -41,10 +40,10 @@ export default function Benefits() {
                             <h3 className="font-medium font-headings text-2xl text-center mt-2">
                                 Security
                             </h3>
-                            <p className="font-text text-center mt-auto pt-4">
-                                Includes fast hosting options, additional
-                                content updates, and backups - ready whenever
-                                you are.
+                            <p className="font-text text-center  pt-4">
+                                Get enterprise-grade security to keep hackers{" "}
+                                <span className="italic">out</span> of your
+                                business.
                             </p>
                         </div>
                     </div>
