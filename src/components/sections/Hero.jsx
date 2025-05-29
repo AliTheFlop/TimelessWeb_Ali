@@ -50,7 +50,7 @@ export default function HeroSection() {
                             <img
                                 src="/homepage/illustration.svg"
                                 alt="Modern website design showcase"
-                                className="w-full h-auto object-cover"
+                                className="w-full h-auto object-contain"
                                 style={{ aspectRatio: "1:1" }}
                             />
                         </div>
