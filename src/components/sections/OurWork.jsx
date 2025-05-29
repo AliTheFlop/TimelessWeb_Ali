@@ -31,19 +31,19 @@ const projectsComplete = [
 
 export default function OurWork() {
     return (
-        <section className="flex min-h-screen flex-col items-center justify-center">
-            <div className="w-full max-w-[80%] flex flex-col items-center h-auto md:h-screen">
+        <section className="flex flex-col items-center justify-center">
+            <div className="w-full max-w-[80%] flex flex-col items-center h-auto mb-32">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2 mb-10">
-                        <h2 className="font-primary text-3xl font-medium">
-                            We Create Websites That Look Good
+                        <h2 className="font-primary text-4xl font-medium">
+                            Your Website Is Our Responsibility
                         </h2>
                         <p className="font-text text-lg">
-                            Here's just a few examples of the work we've done
-                            for our clients.
+                            We manage everything so you never have to think
+                            about it, here&apos;s some clients we manage:
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 gap-y-12 md:grid-cols-3 grid-rows-1 gap-x-12">
+                    <div className="grid grid-cols-1 gap-y-12 grid-rows-1 gap-x-4 lg:gap-x-12 xl:grid-cols-3 lg:grid-cols-2">
                         {projectsComplete.map((project) => (
                             <div
                                 key={project.key}

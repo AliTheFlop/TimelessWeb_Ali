@@ -9,16 +9,16 @@ export default function HeroSection() {
                     {/* Content */}
                     <div className="text-center lg:text-left space-y-8">
                         <div className="space-y-6">
-                            <h1 className="text-4xl md:text-5xl xl:text-6xl font-primary font-bold leading-tight">
-                                Fast Websites That{" "}
+                            <h1 className="text-4xl md:text-5xl xl:text-6xl font-primary font-medium leading-tight">
+                                Creating Websites That{" "}
                                 <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                                    Look Good
+                                    Win Clients
                                 </span>
                             </h1>
                             <p className="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
-                                We build websites that load quickly and look
-                                great on any device. No fuss, no jargon - just
-                                results.
+                                We help convert visitors into paying customers
+                                with a conversion-focused website that speaks
+                                directly to your audience.
                             </p>
                         </div>
 
