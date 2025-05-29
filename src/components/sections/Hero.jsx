@@ -47,11 +47,13 @@ export default function HeroSection() {
                     {/* Image Side */}
                     <div className="flex-1 relative">
                         <div className="relative rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-500">
+                            <div className="absolute inset-0 pointer-events-none" />
                             <img
                                 src="/homepage/illustration.svg"
                                 alt="Modern website design showcase"
-                                className="w-full h-auto object-contain"
+                                className="w-full h-auto object-cover"
                                 style={{ aspectRatio: "1:1" }}
+                                loading="eager"
                             />
                         </div>
                     </div>
