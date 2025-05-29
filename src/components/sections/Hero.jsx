@@ -46,7 +46,7 @@ export default function HeroSection() {
 
                     {/* Image Side */}
                     <div className="flex-1 relative">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+                        <div className="relative rounded-2xl overflow-hidden transform hover:scale-[1.02] transition-transform duration-500">
                             <img
                                 src="/homepage/illustration.svg"
                                 alt="Modern website design showcase"
