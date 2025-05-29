@@ -3,8 +3,8 @@ import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
     return (
-        <section className="relative min-h-screen w-full flex items-center justify-center bg-gradient-to-b from-purple-50 via-white to-white py-20 lg:py-0">
-            <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+        <section className="relative min-h-[80vh] w-full flex items-center justify-center bg-gradient-to-b from-purple-50 via-white to-white py-20 lg:py-0">
+            <div className="container mx-auto max-w-[80%]">
                 <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     {/* Content */}
                     <div className="text-center lg:text-left space-y-8">
@@ -16,7 +16,9 @@ export default function HeroSection() {
                                 </span>
                             </h1>
                             <p className="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0">
-                                We build websites that load quickly and look great on any device. No fuss, no jargon - just results.
+                                We build websites that load quickly and look
+                                great on any device. No fuss, no jargon - just
+                                results.
                             </p>
                         </div>
 
