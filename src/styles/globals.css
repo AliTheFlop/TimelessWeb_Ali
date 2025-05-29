@@ -27,3 +27,9 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #8b5cf6;
 }
+
+.bg-grid-pattern {
+    background-image: linear-gradient(to right, #6b21a8 1px, transparent 1px),
+                      linear-gradient(to bottom, #6b21a8 1px, transparent 1px);
+    background-size: 24px 24px;
+}
