@@ -38,28 +38,10 @@ export default function HeroSection() {
                                 See Our Work
                             </Button>
                         </div>
-
-                        {/* Trust Indicators */}
-                        <div className="pt-8 border-t border-gray-100">
-                            <div className="grid grid-cols-3 gap-6 items-center">
-                                <div className="text-center">
-                                    <div className="font-bold text-2xl text-purple-600">24hr</div>
-                                    <div className="text-sm text-gray-600">Turnaround</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="font-bold text-2xl text-purple-600">100%</div>
-                                    <div className="text-sm text-gray-600">Satisfaction</div>
-                                </div>
-                                <div className="text-center">
-                                    <div className="font-bold text-2xl text-purple-600">5★</div>
-                                    <div className="text-sm text-gray-600">Rated</div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
-                    {/* Image */}
-                    <div className="relative order-first lg:order-last">
+                    {/* Image - Hidden on tablets and below */}
+                    <div className="hidden lg:block relative">
                         <div className="relative w-full max-w-2xl mx-auto">
                             <div className="aspect-square relative z-10">
                                 <img
