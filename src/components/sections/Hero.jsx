@@ -34,7 +34,7 @@ export default function HeroSection() {
                             <Button
                                 href="/work"
                                 variant="secondary"
-                                className="text-base px-8 py-4"
+                                className="text-base px-8 py-4 "
                                 fullWidth={false}
                             >
                                 See Our Work

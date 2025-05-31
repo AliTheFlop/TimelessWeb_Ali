@@ -15,7 +15,7 @@ export default function Button({
 }) {
     const widthClass = fullWidth ? "w-full" : "w-auto";
     const base =
-        "rounded px-8 py-3 font-medium transition text-center font-primary font-extrabold";
+        "rounded px-8 py-3 font-medium transition text-center font-primary font-extrabold cursor-pointer";
 
     const variants = {
         primary:
