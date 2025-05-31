@@ -24,7 +24,7 @@ export default function HeroSection() {
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                             <Button
-                                href="#contact-form"
+                                href="/contact"
                                 className="group text-base px-8 py-4"
                                 fullWidth={false}
                             >
