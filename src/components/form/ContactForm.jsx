@@ -48,7 +48,7 @@ export default function ContactForm() {
 
         // If local validation passes, send to Formspark
         try {
-            const response = await fetch("https://submit-form.com/k2BmGYeHC", {
+            const response = await fetch("https://api.formspark.io/k2BmGYeHC", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -75,8 +75,7 @@ export default function ContactForm() {
                 console.error("❌ Formspark submission error:", errorData);
                 setSubmitStatus({
                     type: "error",
-                    message: `Submission failed: ${
-                        errorData.message || "Please try again."
+                    message: `Submission failed. If the issue persists, please try another browser.
                     }`,
                 });
             }
