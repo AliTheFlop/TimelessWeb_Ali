@@ -5,6 +5,7 @@ import { useState } from "react";
 import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Menu } from "lucide-react";
 
 export default function PocketNav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,17 +22,18 @@ export default function PocketNav() {
     return (
         <>
             <div className="fixed top-0 left-0 right-0 p-4 bg-purple-600 flex justify-between items-center text-white z-50">
+                <div className="text-xl font-bold font-lexend">
+                    Timeless Web
+                </div>
                 <Button
                     onClick={handleOpen}
                     variant="ghost"
                     fullWidth={false}
                     aria-label="Open menu"
-                    className="text-white" // Ensures icon is white
+                    className="text-white"
                 >
-                    <FontAwesomeIcon icon={faBars} />
+                    <Menu width="32" height="32" />
                 </Button>
-                <div className="text-xl font-bold font-lexend">TimelessWeb</div>{" "}
-                {/* Added font-lexend */}
             </div>
 
             <div
@@ -40,7 +42,7 @@ export default function PocketNav() {
                 }`}
             >
                 {/* Overlay to close menu */}
-                <button // Changed to a button for accessibility and semantics
+                <button
                     onClick={handleClose}
                     aria-label="Close Menu Overlay"
                     className="absolute inset-0 bg-black opacity-75 w-full h-full cursor-default" // Simplified overlay button

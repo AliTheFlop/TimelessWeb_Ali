@@ -18,7 +18,7 @@ export default function Explanations() {
                             visitors understand what you do - without you
                             picking up the phone.
                         </p>
-                        <ul className="text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
+                        <ul className="text-base md:text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
                                 Get more clients
@@ -77,7 +77,7 @@ export default function Explanations() {
                             books appointments, and filters out the tire-kickers
                             so you only deal with real business. You get:
                         </p>
-                        <ul className="text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
+                        <ul className="text-base md:text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
                                 Less administrative work
@@ -113,7 +113,7 @@ export default function Explanations() {
                             makes people remember and want to do more business
                             with you.
                         </p>
-                        <ul className="text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
+                        <ul className="text-base md:text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
                                 Build more trust with customers
