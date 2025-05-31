@@ -1,5 +1,5 @@
-'use client';
-import PropTypes from 'prop-types';
+"use client";
+import PropTypes from "prop-types";
 
 export default function FormLabel({ htmlFor, label, children, hint }) {
     return (
@@ -7,8 +7,10 @@ export default function FormLabel({ htmlFor, label, children, hint }) {
             <span className="text-gray-700">{label}</span>
             {children}
             {hint && (
-                <div className="w-full text-center">
-                    <p className="text-xs text-gray-500 hover:text-purple-600 mt-1 underline">{hint}</p>
+                <div className="w-full text-right">
+                    <p className="text-xs text-gray-500 hover:text-purple-600 mt-1 underline">
+                        {hint}
+                    </p>
                 </div>
             )}
         </label>

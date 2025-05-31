@@ -1,4 +1,6 @@
 import ProjectImage from "../ui/ProjectImage";
+import Button from "../ui/Button";
+import { ArrowRight } from "lucide-react";
 
 const projectsComplete = [
     {
@@ -32,18 +34,18 @@ const projectsComplete = [
 export default function OurWork() {
     return (
         <section className="flex flex-col items-center justify-center">
-            <div className="w-full max-w-[80%] flex flex-col items-center h-auto mb-32">
+            <div className="w-full max-w-[80%] flex flex-col items-center h-auto my-32">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2 mb-10">
-                        <h2 className="font-primary text-3xl lg:text-4xl font-medium text-center lg:text-left">
-                            Your Website Is Our Responsibility
+                        <h2 className="font-primary text-3xl lg:text-4xl text-center lg:text-left text-purple-600">
+                            We&apos;ve Done This Before
                         </h2>
                         <p className="font-text text-lg text-center lg:text-left">
-                            We manage everything so you never have to think
-                            about it, here&apos;s some clients we manage:
+                            Here&apos;s some work we&apos;ve done before to show
+                            you we mean business:
                         </p>
                     </div>
-                    <div className="grid grid-cols-1 gap-y-12 grid-rows-1 gap-x-4 lg:gap-x-12 xl:grid-cols-3 lg:grid-cols-2">
+                    <div className="grid pb-10 grid-cols-1 gap-y-12 grid-rows-1 gap-x-4 lg:gap-x-12 xl:grid-cols-3 lg:grid-cols-2">
                         {projectsComplete.map((project) => (
                             <div
                                 key={project.key}

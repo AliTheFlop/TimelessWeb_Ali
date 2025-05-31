@@ -1,12 +1,12 @@
-import '@/lib/fontAwesome.js';
-import '@/styles/globals.css';
-import PropTypes from 'prop-types';
-import NavWrapper from '@/components/nav/NavWrapper';
-import ContactForm from '@/components/form/ContactForm';
+import "@/lib/fontAwesome.js";
+import "@/styles/globals.css";
+import PropTypes from "prop-types";
+import NavWrapper from "@/components/nav/NavWrapper";
+import ContactForm from "@/components/form/ContactForm";
 
 export const metadata = {
-    title: 'TimelessWeb | Web Design',
-    description: 'Modern websites tailored for your brand — TimelessWeb.com.au',
+    title: "TimelessWeb | Web Design",
+    description: "Modern websites tailored for your brand — TimelessWeb.com.au",
 };
 
 export default function RootLayout({ children }) {
@@ -29,14 +29,10 @@ export default function RootLayout({ children }) {
                 <main className="flex-grow">{children}</main>
 
                 <footer className="bg-gray-100 w-full">
-                    <div className="max-w-4xl mx-auto px-5 py-10">
-                        {' '}
-                        <ContactForm />{' '}
-                    </div>
                     <div className="bg-black w-full px-5 py-5">
                         <p className="font-semibold text-sm text-white text-left">
-                            {' '}
-                            © {new Date().getFullYear()} TimelessWeb{' '}
+                            {" "}
+                            © {new Date().getFullYear()} TimelessWeb{" "}
                         </p>
                     </div>
                 </footer>

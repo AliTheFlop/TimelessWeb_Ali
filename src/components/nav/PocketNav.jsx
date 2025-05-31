@@ -1,3 +1,4 @@
+// src/components/nav/PocketNav.jsx
 "use client";
 import Link from "next/link";
 import { useState } from "react";
@@ -10,6 +11,13 @@ export default function PocketNav() {
     const handleOpen = () => setIsOpen(true);
     const handleClose = () => setIsOpen(false);
 
+    // Function to close menu and then navigate
+    const handleLinkClick = (e, href) => {
+        // This component doesn't use next/navigation, so we can't use router.push directly here.
+        // Next/link handles navigation. We just need to close the menu.
+        setIsOpen(false);
+    };
+
     return (
         <>
             <div className="fixed top-0 left-0 right-0 p-4 bg-purple-600 flex justify-between items-center text-white z-50">
@@ -18,11 +26,12 @@ export default function PocketNav() {
                     variant="ghost"
                     fullWidth={false}
                     aria-label="Open menu"
-                    className="text-white"
+                    className="text-white" // Ensures icon is white
                 >
                     <FontAwesomeIcon icon={faBars} />
                 </Button>
-                <div className="text-xl font-bold">TimelessWeb</div>
+                <div className="text-xl font-bold font-lexend">TimelessWeb</div>{" "}
+                {/* Added font-lexend */}
             </div>
 
             <div
@@ -30,44 +39,63 @@ export default function PocketNav() {
                     isOpen ? "translate-x-0" : "-translate-x-full"
                 }`}
             >
-                <Button
+                {/* Overlay to close menu */}
+                <button // Changed to a button for accessibility and semantics
                     onClick={handleClose}
-                    variant="overlay"
-                    fullWidth={false}
                     aria-label="Close Menu Overlay"
-                ></Button>
+                    className="absolute inset-0 bg-black opacity-75 w-full h-full cursor-default" // Simplified overlay button
+                ></button>
 
-                <div className="relative bg-white h-full w-4/5 max-w-sm p-6 shadow-lg z-50">
+                <div className="relative bg-white h-full w-4/5 max-w-sm p-6 shadow-lg z-[51]">
+                    {" "}
+                    {/* Increased z-index */}
                     <Button
                         onClick={handleClose}
                         variant="ghost"
                         fullWidth={false}
                         aria-label="Close menu"
-                        className="self-end text-2xl"
+                        className="self-end text-2xl absolute top-4 right-4 text-gray-700 hover:text-black" // Positioned close button
                     >
                         <FontAwesomeIcon icon={faTimes} />
                     </Button>
-
-                    <nav className="flex flex-col gap-6 mt-10 text-lg font-medium">
-                        <Link href="/" onClick={() => setIsOpen(false)}>
+                    <nav className="flex flex-col gap-6 mt-16 text-lg font-medium font-primary">
+                        {" "}
+                        {/* Added font-primary and mt */}
+                        <Link
+                            href="/"
+                            onClick={handleLinkClick}
+                            className="text-gray-800 hover:text-purple-600"
+                        >
                             Home
                         </Link>
-                        <Link href="/services" onClick={() => setIsOpen(false)}>
+                        <Link
+                            href="/services"
+                            onClick={handleLinkClick}
+                            className="text-gray-800 hover:text-purple-600"
+                        >
                             Our Services
                         </Link>
-                        <Link href="/work" onClick={() => setIsOpen(false)}>
+                        <Link
+                            href="/work"
+                            onClick={handleLinkClick}
+                            className="text-gray-800 hover:text-purple-600"
+                        >
                             Our Work
                         </Link>
-                        <Link href="/about" onClick={() => setIsOpen(false)}>
+                        <Link
+                            href="/about"
+                            onClick={handleLinkClick}
+                            className="text-gray-800 hover:text-purple-600"
+                        >
                             About Us
                         </Link>
-                        <a
-                            href="#contact-form"
-                            onClick={() => setIsOpen(false)}
-                            className="text-purple-600"
+                        <Link // Changed from <a> to <Link>
+                            href="/contact" // Changed href
+                            onClick={handleLinkClick}
+                            className="text-purple-600 font-semibold hover:underline" // Matched styling
                         >
                             Contact Us
-                        </a>
+                        </Link>
                     </nav>
                 </div>
             </div>

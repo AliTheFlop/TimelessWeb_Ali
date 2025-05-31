@@ -28,7 +28,7 @@ export default function HeroSection() {
                                 className="group text-base px-8 py-4"
                                 fullWidth={false}
                             >
-                                Start Your Project
+                                Get A Free Quote
                                 <ArrowRight className="ml-2 w-4 h-4 inline-block group-hover:translate-x-1 transition-transform" />
                             </Button>
                             <Button
@@ -47,7 +47,7 @@ export default function HeroSection() {
                         <div className="relative w-full max-w-2xl mx-auto">
                             <div className="aspect-square relative z-10">
                                 <img
-                                    src="/homepage/illustration.svg"
+                                    src="/homepage/hero_image.svg"
                                     alt="Web Design Illustration"
                                     className="w-full h-full object-contain"
                                     loading="eager"

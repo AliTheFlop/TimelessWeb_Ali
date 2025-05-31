@@ -6,7 +6,7 @@ export default function Benefits() {
             <div className="w-full max-w-[80%] flex flex-col items-center h-auto mb-32">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2 mb-10">
-                        <h2 className="font-primary text-3xl lg:text-4xl font-medium text-center lg:text-left">
+                        <h2 className="font-primary text-3xl lg:text-4xl text-center lg:text-left text-purple-600">
                             We Save You Time & Effort
                         </h2>
                         <p className="font-text text-lg text-center lg:text-left">
