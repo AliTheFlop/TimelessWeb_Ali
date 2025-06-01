@@ -2,6 +2,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Logo from "../ui/Logo";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -24,13 +25,15 @@ export default function Navbar() {
         <nav className="fixed top-0 left-0 z-50 w-full flex items-center justify-center py-4 bg-purple-600 shadow-md hover:shadow-lg transition-shadow">
             <div className="w-full max-w-[80%] flex items-center justify-between">
                 <div className="text-white text-2xl font-bold font-lexend tracking-tight">
-                    <Link href="/">Timeless Web</Link>
+                    <Link href="/">
+                        <Logo width="120" height="70" className="" />
+                    </Link>
                 </div>
                 <div className="flex items-center gap-6 font-primary">
                     <Link href="/" className={linkClass("/")}>
                         Home
                     </Link>
-                    <Link href="/services" className={linkClass("/services")}>
+                    {/* <Link href="/services" className={linkClass("/services")}>
                         Our Services
                     </Link>
                     <Link href="/work" className={linkClass("/work")}>
@@ -38,12 +41,12 @@ export default function Navbar() {
                     </Link>
                     <Link href="/about" className={linkClass("/about")}>
                         About Us
-                    </Link>
+                    </Link> */}
                     <Link
                         href="/contact"
                         className={linkClass("/contact", true)}
                     >
-                        Contact Us
+                        Get A Free Quote
                     </Link>
                 </div>
             </div>

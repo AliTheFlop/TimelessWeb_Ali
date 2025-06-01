@@ -4,8 +4,9 @@ import Link from "next/link";
 import { useState } from "react";
 import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Menu } from "lucide-react";
+import Logo from "../ui/Logo";
 
 export default function PocketNav() {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,9 +23,9 @@ export default function PocketNav() {
     return (
         <>
             <div className="fixed top-0 left-0 right-0 p-4 bg-purple-600 flex justify-between items-center text-white z-50">
-                <div className="text-xl font-bold font-lexend">
-                    Timeless Web
-                </div>
+                <Link href="/">
+                    <Logo width="120" height="70" className="" />
+                </Link>
                 <Button
                     onClick={handleOpen}
                     variant="ghost"
@@ -70,7 +71,7 @@ export default function PocketNav() {
                         >
                             Home
                         </Link>
-                        <Link
+                        {/* <Link
                             href="/services"
                             onClick={handleLinkClick}
                             className="text-gray-800 hover:text-purple-600"
@@ -90,13 +91,13 @@ export default function PocketNav() {
                             className="text-gray-800 hover:text-purple-600"
                         >
                             About Us
-                        </Link>
+                        </Link> */}
                         <Link // Changed from <a> to <Link>
                             href="/contact" // Changed href
                             onClick={handleLinkClick}
-                            className="text-purple-600 font-semibold hover:underline" // Matched styling
+                            className="bg-white text-purple-600 border border-purple-600 font-semibold px-4 py-2 rounded hover:bg-purple-100 transition" // Matched styling
                         >
-                            Contact Us
+                            Get A Free Quote
                         </Link>
                     </nav>
                 </div>

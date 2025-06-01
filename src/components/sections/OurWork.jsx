@@ -1,33 +1,32 @@
 import ProjectImage from "../ui/ProjectImage";
-import Button from "../ui/Button";
-import { ArrowRight } from "lucide-react";
 
 const projectsComplete = [
     {
-        name: "Altus Plumbing",
-        description: " A Local Plumber Based in Sydney, Australia",
-        imgSrc: "/homepage/projects/altusplumbing.webp",
-        link: "https://altusplumbing.com.au",
+        name: "HJ Accounting",
+        description: " A High-End Accounting Firm",
+        imgSrc: "/homepage/projects/hjaccounting.webp",
+        link: "https://hjaccounting.timelessweb.com.au",
         colour: "#A90B81",
         key: 1,
+        id: "hjaccounting",
     },
     {
-        name: "Altus Plumbing",
-        description: " A Local Plumber Based in Sydney, Australia",
-        imgSrc: "/homepage/projects/altusplumbing.webp",
-
-        link: "https://altusplumbing.com.au",
+        name: "Paramount Energy",
+        description: " A Local Electrician in Sydney, Australia",
+        imgSrc: "/homepage/projects/paramountenergy.webp",
+        link: "https://paramountenergy.timelessweb.com.au",
         colour: "#0B3DA9",
         key: 2,
+        id: "paramountenergy",
     },
     {
         name: "Altus Plumbing",
         description: " A Local Plumber Based in Sydney, Australia",
         imgSrc: "/homepage/projects/altusplumbing.webp",
-
         link: "https://altusplumbing.com.au",
         colour: "#0BA96C",
         key: 3,
+        id: "altusplumbing",
     },
 ];
 

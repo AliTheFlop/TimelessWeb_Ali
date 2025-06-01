@@ -5,7 +5,7 @@ export const metadata = { title: "Contact Us | TimelessWeb" };
 
 export default function ContactPage() {
     return (
-        <div className="container min-h-screen mx-auto py-32 px-4 md:px-6 lg:py-32">
+        <div className="container min-h-screen mx-auto py-40 px-4 md:px-6">
             <div className="mx-auto">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-primary font-medium leading-tight mb-4 text-purple-600">
