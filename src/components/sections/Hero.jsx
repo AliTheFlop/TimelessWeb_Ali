@@ -31,14 +31,14 @@ export default function HeroSection() {
                                 Get A Free Quote
                                 <ArrowRight className="ml-2 w-4 h-4 inline-block group-hover:translate-x-1 transition-transform" />
                             </Button>
-                            <Button
+                            {/* <Button
                                 href="/work"
                                 variant="secondary"
                                 className="text-base px-8 py-4 "
                                 fullWidth={false}
                             >
                                 See Our Work
-                            </Button>
+                            </Button> */}
                         </div>
                     </div>
 

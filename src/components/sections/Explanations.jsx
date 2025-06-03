@@ -31,7 +31,7 @@ export default function Explanations() {
 
                         <div className="mt-6 text-center lg:text-start">
                             <Button
-                                href="#contact-form"
+                                href="/contact"
                                 variant="secondary"
                                 fullWidth={false}
                                 className="text-base px-6 py-3"
@@ -90,7 +90,7 @@ export default function Explanations() {
 
                         <div className="mt-6 text-center lg:text-start">
                             <Button
-                                href="#contact-form"
+                                href="/contact"
                                 variant="secondary"
                                 fullWidth={false}
                                 className="text-base px-6 py-3"
@@ -126,7 +126,7 @@ export default function Explanations() {
 
                         <div className="mt-6 text-center lg:text-start">
                             <Button
-                                href="#contact-form"
+                                href="/contact"
                                 variant="secondary"
                                 fullWidth={false}
                                 className="text-base px-6 py-3"

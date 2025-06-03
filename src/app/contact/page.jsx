@@ -1,5 +1,5 @@
 // src/app/contact/page.jsx
-import ContactForm from "@/components/form/ContactForm"; // Corrected path
+import ContactForm from "@/components/form/ContactForm";
 
 export const metadata = { title: "Contact Us | TimelessWeb" };
 

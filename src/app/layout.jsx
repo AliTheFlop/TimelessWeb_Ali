@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
                 <main className="flex-grow">{children}</main>
 
                 <footer className="bg-gray-100 w-full">
-                    <div className="bg-black w-full px-5 py-5">
+                    <div className="bg-purple-600 w-full px-5 py-5">
                         <p className="font-semibold text-sm text-white text-left">
                             {" "}
                             © {new Date().getFullYear()} TimelessWeb{" "}
