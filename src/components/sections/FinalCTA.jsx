@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function FinalCTA() {
     return (
-        <section className="flex flex-col items-center justify-center py-32">
+        <section className="flex flex-col items-center justify-center py-32 bg-slate-50 inset-shadow-sm">
             <div className="w-full max-w-[80%] flex flex-col items-center gap-8 h-auto text-purple-600">
                 <h2 className="font-primary font-bold text-3xl lg:text-4xl text-center lg:text-left ">
                     Let&apos;s Get Your Business Online

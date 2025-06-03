@@ -3,7 +3,7 @@ import Button from "../ui/Button";
 
 export default function Explanations() {
     return (
-        <section className="flex flex-col items-center justify-center py-16 md:py-24 bg-slate-50">
+        <section className="flex flex-col items-center justify-center py-16 md:py-24 ">
             <div className="w-full max-w-[80%] flex flex-col gap-32 h-auto">
                 {/** FIRST ONE START */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">

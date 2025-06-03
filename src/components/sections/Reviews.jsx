@@ -4,13 +4,13 @@ import { Star } from "lucide-react";
 
 export default function Reviews() {
     return (
-        <section className="flex flex-col items-center justify-center py-16 bg-slate-50">
+        <section className="flex flex-col items-center justify-center py-16 inset-shadow-sm">
             <div className="w-full max-w-[80%] flex flex-col items-center h-auto ">
                 <div className="flex flex-col gap-8 w-full items-center">
                     <div className="flex flex-col gap-3 mb-10 text-center">
                         {" "}
                         {/* Slightly increased gap */}
-                        <h2 className="font-primary text-3xl lg:text-4xl text-purple-600">
+                        <h2 className="font-primary text-3xl lg:text-4xl text-purple-600 ">
                             What They Say About Us...
                         </h2>
                         <p className="font-text text-lg text-gray-700 max-w-3xl mx-auto">

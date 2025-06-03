@@ -32,7 +32,7 @@ const projectsComplete = [
 
 export default function OurWork() {
     return (
-        <section className="flex flex-col items-center justify-center">
+        <section className="flex flex-col items-center justify-center bg-slate-50">
             <div className="w-full max-w-[80%] flex flex-col items-center h-auto my-32">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2 mb-10">
@@ -48,7 +48,7 @@ export default function OurWork() {
                         {projectsComplete.map((project) => (
                             <div
                                 key={project.key}
-                                className={`flex flex-col w-full h-full max-h-[400px] p-8 shadow-md rounded-2xl`}
+                                className={`flex flex-col w-full h-full max-h-[400px] p-8 shadow-xl rounded-2xl`}
                                 style={{ backgroundColor: project.colour }}
                             >
                                 <ProjectImage project={project} />

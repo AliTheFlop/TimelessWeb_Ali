@@ -2,8 +2,8 @@ import { AppWindowMac, Cog, GlobeLock } from "lucide-react";
 
 export default function Benefits() {
     return (
-        <section className="flex flex-col items-center justify-center">
-            <div className="w-full max-w-[80%] flex flex-col items-center h-auto mb-32">
+        <section className="flex flex-col items-center justify-center bg-slate-50 py-32">
+            <div className="w-full max-w-[80%] flex flex-col items-center h-auto">
                 <div className="flex flex-col gap-8">
                     <div className="flex flex-col gap-2 mb-10">
                         <h2 className="font-primary text-3xl lg:text-4xl text-center lg:text-left text-purple-600">
@@ -15,7 +15,7 @@ export default function Benefits() {
                         </p>
                     </div>
                     <div className="grid grid-cols-1 gap-y-12 grid-rows-1 gap-x-4 lg:gap-x-12 xl:grid-cols-3 lg:grid-cols-2">
-                        <div className="border-purple-600 border flex flex-col items-center justify-center px-8 py-12 min-h-80 rounded-xl">
+                        <div className="border-purple-600 bg-white shadow-xl border flex flex-col items-center justify-center px-8 py-12 min-h-80 rounded-xl">
                             <AppWindowMac className="w-12 h-12 text-purple-600" />
                             <h3 className="font-medium font-headings text-2xl text-center mt-2">
                                 Hosting
@@ -25,7 +25,7 @@ export default function Benefits() {
                                 uptime guarantee.
                             </p>
                         </div>
-                        <div className="border-purple-600 border flex flex-col items-center justify-center px-8 py-12 rounded-xl">
+                        <div className="border-purple-600  bg-white shadow-xl border flex flex-col items-center justify-center px-8 py-12 rounded-xl">
                             <Cog className="w-12 h-12 text-purple-600" />
                             <h3 className="font-medium font-headings text-2xl text-center mt-2">
                                 Maintenance
@@ -35,7 +35,7 @@ export default function Benefits() {
                                 Includes content & security updates.
                             </p>
                         </div>
-                        <div className="border-purple-600 border flex flex-col items-center justify-center px-8 py-12 rounded-xl">
+                        <div className="border-purple-600  bg-white shadow-xl border flex flex-col items-center justify-center px-8 py-12 rounded-xl">
                             <GlobeLock className="w-12 h-12 text-purple-600" />
                             <h3 className="font-medium font-headings text-2xl text-center mt-2">
                                 Security
