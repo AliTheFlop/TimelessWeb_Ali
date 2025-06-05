@@ -1,4 +1,3 @@
-// src/components/nav/PocketNav.jsx
 "use client";
 import Link from "next/link";
 import { useState } from "react";
@@ -7,8 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Menu } from "lucide-react";
 import Logo from "../ui/Logo";
+import clsx from "clsx";
 
-export default function PocketNav() {
+export default function PocketNav({ isScrolled }) {
     const [isOpen, setIsOpen] = useState(false);
     const handleOpen = () => setIsOpen(true);
     const handleClose = () => setIsOpen(false);
@@ -22,7 +22,15 @@ export default function PocketNav() {
 
     return (
         <>
-            <div className="fixed top-0 left-0 right-0 p-4 bg-purple-600 flex justify-between items-center text-white z-50">
+            <div
+                className={clsx(
+                    "fixed top-0 left-0 right-0 p-4 flex justify-between items-center text-white z-50 transition-colors duration-300",
+                    {
+                        "bg-purple-600": isScrolled,
+                        "bg-transparent": !isScrolled,
+                    }
+                )}
+            >
                 <Link href="/">
                     <Logo width="120" height="70" className="" />
                 </Link>

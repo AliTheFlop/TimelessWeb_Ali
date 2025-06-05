@@ -1,10 +1,10 @@
-// src/components/nav/Navbar.jsx
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "../ui/Logo";
+import clsx from "clsx";
 
-export default function Navbar() {
+export default function Navbar({ isScrolled }) {
     const pathname = usePathname();
 
     const linkClass = (href, isButton = false) => {
@@ -22,7 +22,15 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 z-50 w-full flex items-center justify-center py-4 bg-purple-600 shadow-md hover:shadow-lg transition-shadow">
+        <nav
+            className={clsx(
+                "fixed top-0 left-0 z-50 w-full flex items-center justify-center py-4 transition-all duration-300",
+                {
+                    "bg-purple-600 shadow-md": isScrolled,
+                    "bg-transparent": !isScrolled,
+                }
+            )}
+        >
             <div className="w-full max-w-[80%] flex items-center justify-between">
                 <div className="text-white text-2xl font-bold font-lexend tracking-tight">
                     <Link href="/">

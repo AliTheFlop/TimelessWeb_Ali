@@ -1,14 +1,14 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 html {
     scroll-behavior: smooth;
 }
 
 @theme inline {
-    --font-primary: 'Bricolage Grotesque', sans-serif;
-    --font-lexend: 'Lexend', sans-serif; /* This is for the logo lol it looks cool */
-    --font-text: 'Inter', sans-serif;
-    --font-headings: 'Poppins', sans-serif;
+    --font-primary: "Bricolage Grotesque", sans-serif;
+    --font-lexend: "Lexend", sans-serif; /* This is for the logo lol it looks cool */
+    --font-text: "Inter", sans-serif;
+    --font-headings: "Poppins", sans-serif;
     --color-headings: #2d2d2d;
 }
 
@@ -26,4 +26,17 @@ html {
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #8b5cf6;
+}
+
+.animated-glow {
+    background: linear-gradient(
+        135deg,
+        transparent 50%,
+        rgba(147, 51, 234, 0.15) 100%
+    );
+    opacity: 0;
+    transition: opacity 4s ease-in;
+}
+.animated-glow.visible {
+    opacity: 1;
 }
