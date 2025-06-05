@@ -4,14 +4,14 @@ import { Star } from "lucide-react";
 
 export default function Reviews() {
     return (
-        <section className="flex flex-col items-center justify-center py-16 inset-shadow-sm">
+        <section className="flex flex-col items-center justify-center py-16 bg-slate-50">
             <div className="w-full max-w-[80%] flex flex-col items-center h-auto ">
                 <div className="flex flex-col gap-8 w-full items-center">
                     <div className="flex flex-col gap-3 mb-10 text-center">
                         {" "}
                         {/* Slightly increased gap */}
                         <h2 className="font-primary text-3xl lg:text-4xl text-purple-600 ">
-                            What They Say About Us...
+                            Why Trust Us With Your Website?
                         </h2>
                         <p className="font-text text-lg text-gray-700 max-w-3xl mx-auto">
                             {" "}
@@ -22,7 +22,7 @@ export default function Reviews() {
                     </div>
 
                     {/* Single Review Card */}
-                    <div className="bg-white shadow-xl rounded-lg p-8 md:p-10 max-w-2xl w-full">
+                    <div className="bg-white border-purple-600 border shadow-2xl shadow-purple-600/15 rounded-lg p-8 md:p-10 max-w-2xl w-full">
                         <div className="flex mb-4">
                             {[...Array(5)].map((_, i) => (
                                 <Star
