@@ -11,8 +11,8 @@ export default function Home() {
             <HeroSection />
             <Benefits />
             <Explanations />
-            <Reviews />
             <OurWork />
+            <Reviews />
             <FinalCTA />
         </>
     );

@@ -1,28 +1,37 @@
+// src/components/sections/Reviews.jsx
+"use client";
 import { Star } from "lucide-react";
-
-// Yes this was 100% gpt generated
+import { motion } from "framer-motion";
 
 export default function Reviews() {
     return (
         <section className="flex flex-col items-center justify-center py-16 bg-slate-50">
-            <div className="w-full max-w-[80%] flex flex-col items-center h-auto ">
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.6 }}
+                className="w-full max-w-[80%] flex flex-col items-center h-auto"
+            >
                 <div className="flex flex-col gap-8 w-full items-center">
                     <div className="flex flex-col gap-3 mb-10 text-center">
-                        {" "}
-                        {/* Slightly increased gap */}
-                        <h2 className="font-primary text-3xl lg:text-4xl text-purple-600 ">
+                        <h2 className="font-primary text-3xl lg:text-4xl text-purple-600">
                             Why Trust Us With Your Website?
                         </h2>
                         <p className="font-text text-lg text-gray-700 max-w-3xl mx-auto">
-                            {" "}
-                            {/* Constrained width for better readability */}
                             Here&apos;s what one of our valued clients has to
                             say about their experience:
                         </p>
                     </div>
 
                     {/* Single Review Card */}
-                    <div className="bg-white border-purple-600 border shadow-2xl shadow-purple-600/15 rounded-lg p-8 md:p-10 max-w-2xl w-full">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true, amount: 0.5 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="bg-white border-purple-600 border shadow-2xl shadow-purple-600/15 rounded-lg p-8 md:p-10 max-w-2xl w-full"
+                    >
                         <div className="flex mb-4">
                             {[...Array(5)].map((_, i) => (
                                 <Star
@@ -47,9 +56,9 @@ export default function Reviews() {
                                 Founder, Paramount Energy Group
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }
