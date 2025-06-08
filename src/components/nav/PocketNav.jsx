@@ -100,6 +100,9 @@ export default function PocketNav({ isScrolled }) {
                         >
                             About Us
                         </Link> */}
+                        <Link href="/blog" className={linkClass("/blog")}>
+                            Blog
+                        </Link>
                         <Link // Changed from <a> to <Link>
                             href="/contact" // Changed href
                             onClick={handleLinkClick}
