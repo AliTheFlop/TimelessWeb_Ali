@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Button from "@/components/ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -10,6 +11,8 @@ import clsx from "clsx";
 
 export default function PocketNav({ isScrolled }) {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+
     const handleOpen = () => setIsOpen(true);
     const handleClose = () => setIsOpen(false);
 
@@ -18,6 +21,20 @@ export default function PocketNav({ isScrolled }) {
         // This component doesn't use next/navigation, so we can't use router.push directly here.
         // Next/link handles navigation. We just need to close the menu.
         setIsOpen(false);
+    };
+
+    const linkClass = (href, isButton = false) => {
+        let classes = `text-white hover:underline transition ${
+            pathname === href
+                ? "font-semibold underline underline-offset-4"
+                : ""
+        }`;
+        if (isButton) {
+            classes = `bg-white text-purple-600 font-semibold px-4 py-2 rounded hover:bg-purple-100 transition ${
+                pathname === href ? "ring-2 ring-purple-300" : "" // Example active style for button
+            }`;
+        }
+        return classes;
     };
 
     return (
