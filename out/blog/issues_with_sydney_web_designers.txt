@@ -7,13 +7,13 @@
 b:I[4911,[],"AsyncMetadataOutlet"]
 d:I[9665,[],"ViewportBoundary"]
 f:I[6614,[],""]
-:HL["/_next/static/css/c8a08de3ee4c73f8.css","style"]
-0:{"P":null,"b":"rJUyQI12qaieQgNG0DX0_","p":"","c":["","blog","issues_with_sydney_web_designers"],"i":false,"f":[[["",{"children":["blog",{"children":[["slug","issues_with_sydney_web_designers","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/c8a08de3ee4c73f8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"overflow-x-hidden","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"true"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap","rel":"stylesheet"}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L2",null,{}],["$","main",null,{"className":"flex-grow","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-gray-100 w-full","children":["$","div",null,{"className":"bg-purple-600 w-full px-5 py-5","children":["$","p",null,{"className":"font-semibold text-sm text-white text-left","children":[" ","© ",2025," TimelessWeb"," "]}]}]}]]}]]}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","issues_with_sydney_web_designers","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",["$","$L6",null,{"children":"$L7"}],null,["$","$L8",null,{"children":["$L9","$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","Ju_3q41UoZwQFiKQgrXDF",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],null]}],false]],"m":"$undefined","G":["$f","$undefined"],"s":false,"S":true}
+:HL["/_next/static/css/838a68273479bdb8.css","style"]
+0:{"P":null,"b":"dTOCoTYWZC8sWYRcaFwHD","p":"","c":["","blog","issues_with_sydney_web_designers"],"i":false,"f":[[["",{"children":["blog",{"children":[["slug","issues_with_sydney_web_designers","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/838a68273479bdb8.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"overflow-x-hidden","children":[["$","head",null,{"children":[["$","link",null,{"rel":"preconnect","href":"https://fonts.googleapis.com"}],["$","link",null,{"rel":"preconnect","href":"https://fonts.gstatic.com","crossOrigin":"true"}],["$","link",null,{"href":"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap","rel":"stylesheet"}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L2",null,{}],["$","main",null,{"className":"flex-grow","children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","footer",null,{"className":"bg-gray-100 w-full","children":["$","div",null,{"className":"bg-purple-600 w-full px-5 py-5","children":["$","p",null,{"className":"font-semibold text-sm text-white text-left","children":[" ","© ",2025," TimelessWeb"," "]}]}]}]]}]]}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","issues_with_sydney_web_designers","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L5",["$","$L6",null,{"children":"$L7"}],null,["$","$L8",null,{"children":["$L9","$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","BtfYznZ-mG2LdRUN3FFbq",{"children":[["$","$Ld",null,{"children":"$Le"}],null]}],null]}],false]],"m":"$undefined","G":["$f","$undefined"],"s":false,"S":true}
 10:"$Sreact.suspense"
 11:I[4911,[],"AsyncMetadata"]
 7:["$","$10",null,{"fallback":null,"children":["$","$L11",null,{"promise":"$@12"}]}]
 a:null
-13:T2291,<p>Hey.</p>
+13:T10c9,<p>Hey.</p>
 <p>A few weeks ago I was reading a book: '$1,000,000 Web Designer'. Just checking out the competition.</p>
 <p>To cut a long story short, it showed me that 90%+ of web designers focus on one thing: <em>web design</em>.</p>
 <p>Now I've been studying web design for months. Reading everything. Analyzing hundreds of websites.</p>
@@ -63,85 +63,6 @@ The dentist who's booked? "Emergency appointments available today. No referral n
 <li>Proof that sells: "Average response time of 30 minutes"</li>
 <li>One clear action: "Call now - [number]"</li>
 </ol>
-<p>It's really that simple, yet it's so hard to find.</p>
-<h2>The Opportunity</h2>
-<p>The beautiful thing about this is that: you can dominate.</p>
-<p>Most websites are terrible. Google any service in any suburb right now.</p>
-<p>Half look old and clunky, and the rest are filled with corporate nonsense that don't sell the deal.</p>
-<p><strong>You</strong> can dominate just by:</p>
-<ol>
-<li>Being clear about what you do</li>
-<li>Making it easy to contact you</li>
-<li>Answering what people search for</li>
-</ol>
-<p>No magic formulas, nor any $10,000 investment. It's just common sense that isn't that common.</p>
-<h2>Moving Forward</h2>
-<p>I build websites that do one thing: Get you more customers.</p>
-<p>No corporate speak or unnecessary animations, nor any walls of text that you wouldn't even read.</p>
-<p>Just clean, clear websites that convert visitors into clients.</p>
-<p>At the end of the day, the prettiest website means nothing if it doesn't convert.</p>
-<hr>
-<p><em>P.S. - My team and I work with (mostly local) businesses that want their website to convert more. If that's you, get in touch and let's see if we're a good match: <a href="https://timelessweb.com.au/contact">https://timelessweb.com.au/contact</a></em></p>
-<h1>Issues With Sydney Web Designers</h1>
-<p>Hey.</p>
-<p>A few weeks ago I was reading a book: '$1,000,000 Web Designer'. Just checking out the competition.</p>
-<p>To cut a long story short, it showed me that 90%+ of web designers focus on one thing: web design.</p>
-<p>Now I've been studying web design for months. Reading everything. Analyzing hundreds of websites. Before reading that book, I didn't even think that web design in itself was the issue. But I was wrong.</p>
-<h2>The $10,000 Digital Business Card Problem</h2>
-<p>Here's what's happening in Sydney, and other major cities around the world: every web design agency is selling the same thing:</p>
-<p>Pretty websites that don't do much.</p>
-<p>They feed you words like "elevated digital presence" and sell you on a $10,000 website that just sites there and looks pretty.</p>
-<p>Meanwhile, their potential customers are on Google right now, looking to find someone who can solve their problem. Looking for someone who simply says:</p>
-<blockquote>
-<p>"Blocked drain? Fixed today. <a href="#">Call now</a>."</p>
-</blockquote>
-<h2>So I Started Digging Deeper</h2>
-<p>Plumbers. Dentists. Accountants. Lawyers.</p>
-<p>Know What I found?</p>
-<p>90% of them say the same thing. It's the top performers that are different.</p>
-<ul>
-<li>"Sydney's trusted partner"</li>
-<li>"Excellence in everything we do"</li>
-<li>"Transforming your digital landscape"</li>
-</ul>
-<p>Here's the kicker:</p>
-<p>Your customers don't care about that stuff! That's only for you as the business owner.</p>
-<h2>What Do Customers Want?</h2>
-<p>What actually makes a phone ring?</p>
-<p>After analyzing hundreds of top performers across many niches, I can tell you what's working.</p>
-<p>The guy that get's calls? His website says:</p>
-<blockquote>
-<p>'Blocked drain? Fixed within 2 hours. $0 call out fee."</p>
-</blockquote>
-<p>The dentist who's booked?</p>
-<blockquote>
-<p>"Emergency appointments available today. No referral needed"</p>
-</blockquote>
-<p><em>Do you notice what's missing?</em></p>
-<p>There's no philosophy! No mission statements, nothing the customer won't benefit from.</p>
-<p>It's just clear answers to what their customers search for.</p>
-<h2>The Designer Disease</h2>
-<p>Here's what most Sydney web designers do:</p>
-<ol>
-<li>Show you pretty templates</li>
-<li>Talk about 'user experience journeys'</li>
-<li>Add moving &#x26; animated elements (that make it look cool)</li>
-<li>Fill it with basic stock photos</li>
-<li>Write copy that sounds impressive, but doesn't really mean much</li>
-<li>Charge you $10,000</li>
-<li>Never talk to you again</li>
-</ol>
-<p>You end up with a website, yes, but what does it actually achieve for you?</p>
-<h2>It Has One Simple Job</h2>
-<p>Your website should have one job: Make your phone ring.</p>
-<p>It doesn't need to impress your clients, nor win awards. It should be about your customers.</p>
-<p>After months of studying this, I found out what separates top competitors from the crowd:</p>
-<p><strong>Headlines that highlight the immediate benefit</strong><br>
-<em>Example:</em> "Need an emergency electrician in Parramatta? Call now."</p>
-<p><strong>Proof that sells</strong><br>
-<em>Example:</em> "Average response time of 30 minutes"</p>
-<p><strong>One clear action</strong><br>
-<em>Example:</em> "Call now - [number]"</p>
 <p>It's really that simple, yet it's so hard to find.</p>
 <h2>The Opportunity</h2>
 <p>The beautiful thing about this is that: you can dominate.</p>
