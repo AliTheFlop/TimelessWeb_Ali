@@ -36,7 +36,7 @@ html {
         rgba(147, 51, 234, 0.15) 100%
     );
     opacity: 0;
-    transition: opacity 4s ease-in;
+    transition: opacity 1s ease-in;
 }
 .animated-glow.visible {
     opacity: 1;
