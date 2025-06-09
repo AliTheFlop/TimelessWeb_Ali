@@ -11,9 +11,8 @@ export async function generateStaticParams() {
 // SEO: Generate dynamic metadata for each post
 export async function generateMetadata({ params }) {
     try {
-        // Restore `await params` as seen in the working example
-        const awaitedParams = await params;
-        const postData = await getPostData(awaitedParams.slug);
+        // FIX: Removed incorrect 'await' for params. The 'params' object is not a promise.
+        const postData = await getPostData(params.slug);
         return {
             title: `${postData.title} | TimelessWeb Blog`,
             description: postData.excerpt,
@@ -29,9 +28,8 @@ export async function generateMetadata({ params }) {
 export default async function Post({ params }) {
     let postData;
     try {
-        // Restore `await params` as seen in the working example
-        const awaitedParams = await params;
-        postData = await getPostData(awaitedParams.slug);
+        // FIX: Removed incorrect 'await' for params.
+        postData = await getPostData(params.slug);
     } catch (error) {
         notFound();
     }
@@ -46,13 +44,19 @@ export default async function Post({ params }) {
                         </h1>
                         <p className="text-base !text-gray-500">
                             By {postData.author} on{" "}
-                            {/*
-                                KEY FIX: Render the raw date string directly.
-                                This avoids date manipulation and prevents the
-                                server/client mismatch (hydration error).
-                            */}
                             <time dateTime={postData.date}>
-                                {postData.date}
+                                {
+                                    /* FIX: Formatted the date to be consistent with the blog index page.
+                                       This prevents a mismatch between server and client render. */
+                                    new Date(postData.date).toLocaleDateString(
+                                        "en-US",
+                                        {
+                                            year: "numeric",
+                                            month: "long",
+                                            day: "numeric",
+                                        }
+                                    )
+                                }
                             </time>
                         </p>
                     </div>
