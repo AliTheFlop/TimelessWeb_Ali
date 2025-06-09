@@ -9,6 +9,8 @@ export async function generateStaticParams() {
 }
 
 // SEO: Generate dynamic metadata for each post
+//
+// TODO: DONT AWAIT PARAMS. IT WILL GIVE AN ERROR IN DEV, BUT IN PROD SINCE WE EXPORT STATIC WE CANT AWAIT.
 export async function generateMetadata({ params }) {
     try {
         const postData = await getPostData(params.slug);
@@ -24,6 +26,7 @@ export async function generateMetadata({ params }) {
     }
 }
 
+//TODO: DONT AWAIT PARAMS. IT WILL GIVE AN ERROR IN DEV, BUT IN PROD SINCE WE EXPORT STATIC WE CANT AWAIT.
 export default async function Post({ params }) {
     let postData;
     try {
