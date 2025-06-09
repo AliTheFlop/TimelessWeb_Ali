@@ -9,11 +9,9 @@ export async function generateStaticParams() {
 }
 
 // SEO: Generate dynamic metadata for each post
-//
-// TODO: DONT AWAIT PARAMS. IT WILL GIVE AN ERROR IN DEV, BUT IN PROD SINCE WE EXPORT STATIC WE CANT AWAIT.
 export async function generateMetadata({ params }) {
     try {
-        const postData = await getPostData(params.slug);
+        const postData = await getPostData(params.slug); // No await on params
         return {
             title: `${postData.title} | TimelessWeb Blog`,
             description: postData.excerpt,
@@ -26,19 +24,35 @@ export async function generateMetadata({ params }) {
     }
 }
 
-//TODO: DONT AWAIT PARAMS. IT WILL GIVE AN ERROR IN DEV, BUT IN PROD SINCE WE EXPORT STATIC WE CANT AWAIT.
+// Helper function to safely create a date in UTC
+const createUTCDate = (dateString) => {
+    // Appending 'T00:00:00Z' ensures the date is parsed in the UTC timezone,
+    // preventing inconsistencies between the build server and the client browser.
+    return new Date(`${dateString}T00:00:00Z`);
+};
+
 export default async function Post({ params }) {
     let postData;
     try {
-        postData = await getPostData(params.slug);
+        postData = await getPostData(params.slug); // No await on params
     } catch (error) {
         notFound();
     }
 
+    // Safely format the date to avoid hydration errors
+    const displayDate = createUTCDate(postData.date).toLocaleDateString(
+        "en-US",
+        {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+            timeZone: "UTC", // Explicitly format the date in UTC
+        }
+    );
+
     return (
         <article className="bg-white min-h-screen py-40 px-4 md:px-6">
             <div className="container mx-auto">
-                {/* This is where the magic happens! */}
                 <div className="prose lg:prose-xl max-w-3xl mx-auto">
                     <div className="border-b pb-4 mb-8">
                         <h1 className="text-4xl md:text-5xl !text-purple-600 font-primary !mb-3">
@@ -46,16 +60,7 @@ export default async function Post({ params }) {
                         </h1>
                         <p className="text-base !text-gray-500">
                             By {postData.author} on{" "}
-                            <time dateTime={postData.date}>
-                                {new Date(postData.date).toLocaleDateString(
-                                    "en-US",
-                                    {
-                                        year: "numeric",
-                                        month: "long",
-                                        day: "numeric",
-                                    }
-                                )}
-                            </time>
+                            <time dateTime={postData.date}>{displayDate}</time>
                         </p>
                     </div>
 
