@@ -11,8 +11,7 @@ export async function generateStaticParams() {
 // SEO: Generate dynamic metadata for each post
 export async function generateMetadata({ params }) {
     try {
-        const awaitedParams = await params;
-        const postData = await getPostData(awaitedParams.slug);
+        const postData = await getPostData(params.slug);
         return {
             title: `${postData.title} | TimelessWeb Blog`,
             description: postData.excerpt,
@@ -26,10 +25,9 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Post({ params }) {
-    let awaitedParams = await params;
     let postData;
     try {
-        postData = await getPostData(awaitedParams.slug);
+        postData = await getPostData(params.slug);
     } catch (error) {
         notFound();
     }
