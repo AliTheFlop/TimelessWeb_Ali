@@ -2,6 +2,8 @@
 import { getPostData, getAllPostIds } from "@/lib/posts";
 import { notFound } from "next/navigation";
 
+// All other functions (generateStaticParams, generateMetadata) remain the same.
+
 // SEO: Generate static pages for all posts at build time
 export async function generateStaticParams() {
     const paths = getAllPostIds();
@@ -11,7 +13,6 @@ export async function generateStaticParams() {
 // SEO: Generate dynamic metadata for each post
 export async function generateMetadata({ params }) {
     try {
-        // FIX: Removed incorrect 'await' for params. The 'params' object is not a promise.
         const postData = await getPostData(params.slug);
         return {
             title: `${postData.title} | TimelessWeb Blog`,
@@ -28,7 +29,6 @@ export async function generateMetadata({ params }) {
 export default async function Post({ params }) {
     let postData;
     try {
-        // FIX: Removed incorrect 'await' for params.
         postData = await getPostData(params.slug);
     } catch (error) {
         notFound();
@@ -45,27 +45,39 @@ export default async function Post({ params }) {
                         <p className="text-base !text-gray-500">
                             By {postData.author} on{" "}
                             <time dateTime={postData.date}>
-                                {
-                                    /* FIX: Formatted the date to be consistent with the blog index page.
-                                       This prevents a mismatch between server and client render. */
-                                    new Date(postData.date).toLocaleDateString(
-                                        "en-US",
-                                        {
-                                            year: "numeric",
-                                            month: "long",
-                                            day: "numeric",
-                                        }
-                                    )
-                                }
+                                {new Date(postData.date).toLocaleDateString(
+                                    "en-US",
+                                    {
+                                        year: "numeric",
+                                        month: "long",
+                                        day: "numeric",
+                                    }
+                                )}
                             </time>
                         </p>
                     </div>
 
+                    {/* --- START DIAGNOSTIC TEST --- */}
+                    {/* We are commenting out the dangerous part */}
+                    {/*
                     <div
                         dangerouslySetInnerHTML={{
                             __html: postData.contentHtml,
                         }}
                     />
+                    */}
+
+                    {/* And replacing it with this safe placeholder */}
+                    <div>
+                        <h2>Testing...</h2>
+                        <p>
+                            If you can see this text after clicking "Read More",
+                            it means the navigation worked and the problem is
+                            definitely with the HTML content from the markdown
+                            file.
+                        </p>
+                    </div>
+                    {/* --- END DIAGNOSTIC TEST --- */}
                 </div>
             </div>
         </article>
