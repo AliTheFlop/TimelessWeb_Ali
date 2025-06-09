@@ -58,6 +58,7 @@ export default function BlogIndexPage() {
                                 href={`/blog/${id}`}
                                 variant="secondary"
                                 fullWidth={false}
+                                prefetch={false}
                             >
                                 Read More
                             </Button>
