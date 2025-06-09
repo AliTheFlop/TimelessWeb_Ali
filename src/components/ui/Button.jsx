@@ -38,15 +38,12 @@ export default function Button({
             {children}
         </button>
     ) : (
-        <Link href={href}>
-            <button
-                type={type}
-                onClick={onClick}
-                className={clsx(base, widthClass, variants[variant], className)}
-                {...props}
-            >
-                {children}
-            </button>
+        <Link
+            href={href}
+            className={clsx(base, widthClass, variants[variant], className)}
+            {...props}
+        >
+            {children}
         </Link>
     );
 }

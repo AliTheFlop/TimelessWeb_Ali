@@ -39,14 +39,14 @@ export default function HeroSection() {
                 }`}
             ></div>
             <motion.div
-                className="relative z-10 space-y-8 max-w-[80%] w-full"
+                className="relative z-10 space-y-8 max-w-[80%] w-full flex flex-col items-center justify-center md:block"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
             >
                 <div className="space-y-6">
                     <motion.h1
-                        className="text-5xl md:text-6xl xl:text-7xl font-headings font-medium text-white leading-tight tracking-tighter"
+                        className="text-4xl md:text-6xl xl:text-7xl text-center md:text-left font-headings font-medium text-white leading-tight tracking-tighter"
                         variants={itemVariants}
                     >
                         Creating Websites That
@@ -56,18 +56,14 @@ export default function HeroSection() {
                         </span>
                     </motion.h1>
                     <motion.p
-                        className="text-lg text-gray-300 max-w-xl"
+                        className="md:text-xl lg:text-2xl text-center text-gray-300 md:text-left"
                         variants={itemVariants}
                     >
-                        Whether you need a new website, or want to improve an
-                        old one, we approach each of our projects with the
-                        passion to strive and push further. Creating
-                        high-quality, innovative solutions is what you need, and
-                        we're ready for it.
+                        Getting more customers to convert on your website.
                     </motion.p>
                 </div>
 
-                <motion.div variants={itemVariants}>
+                <motion.div variants={itemVariants} className="mt-12  md:mt-24">
                     <Button
                         href="/contact"
                         className="group text-base px-8 py-4"
