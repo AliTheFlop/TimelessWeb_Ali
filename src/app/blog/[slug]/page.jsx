@@ -11,7 +11,9 @@ export async function generateStaticParams() {
 // SEO: Generate dynamic metadata for each post
 export async function generateMetadata({ params }) {
     try {
-        const postData = await getPostData(params.slug); // No await on params
+        // Restore `await params` as seen in the working example
+        const awaitedParams = await params;
+        const postData = await getPostData(awaitedParams.slug);
         return {
             title: `${postData.title} | TimelessWeb Blog`,
             description: postData.excerpt,
@@ -24,31 +26,15 @@ export async function generateMetadata({ params }) {
     }
 }
 
-// Helper function to safely create a date in UTC
-const createUTCDate = (dateString) => {
-    // Appending 'T00:00:00Z' ensures the date is parsed in the UTC timezone,
-    // preventing inconsistencies between the build server and the client browser.
-    return new Date(`${dateString}T00:00:00Z`);
-};
-
 export default async function Post({ params }) {
     let postData;
     try {
-        postData = await getPostData(params.slug); // No await on params
+        // Restore `await params` as seen in the working example
+        const awaitedParams = await params;
+        postData = await getPostData(awaitedParams.slug);
     } catch (error) {
         notFound();
     }
-
-    // Safely format the date to avoid hydration errors
-    const displayDate = createUTCDate(postData.date).toLocaleDateString(
-        "en-US",
-        {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-            timeZone: "UTC", // Explicitly format the date in UTC
-        }
-    );
 
     return (
         <article className="bg-white min-h-screen py-40 px-4 md:px-6">
@@ -60,7 +46,14 @@ export default async function Post({ params }) {
                         </h1>
                         <p className="text-base !text-gray-500">
                             By {postData.author} on{" "}
-                            <time dateTime={postData.date}>{displayDate}</time>
+                            {/*
+                                KEY FIX: Render the raw date string directly.
+                                This avoids date manipulation and prevents the
+                                server/client mismatch (hydration error).
+                            */}
+                            <time dateTime={postData.date}>
+                                {postData.date}
+                            </time>
                         </p>
                     </div>
 
