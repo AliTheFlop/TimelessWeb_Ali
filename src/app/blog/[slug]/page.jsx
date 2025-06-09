@@ -1,6 +1,7 @@
 // src/app/blog/[slug]/page.jsx
 import { getPostData, getAllPostIds } from "@/lib/posts";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 
 // All other functions (generateStaticParams, generateMetadata) remain the same.
 
@@ -29,6 +30,7 @@ export async function generateMetadata({ params }) {
 export default async function Post({ params }) {
     let postData;
     try {
+        // getPostData now returns 'content' instead of 'contentHtml'
         postData = await getPostData(params.slug);
     } catch (error) {
         notFound();
@@ -37,6 +39,7 @@ export default async function Post({ params }) {
     return (
         <article className="bg-white min-h-screen py-40 px-4 md:px-6">
             <div className="container mx-auto">
+                {/* Your 'prose' classes will style the output of ReactMarkdown */}
                 <div className="prose lg:prose-xl max-w-3xl mx-auto">
                     <div className="border-b pb-4 mb-8">
                         <h1 className="text-4xl md:text-5xl !text-purple-600 font-primary !mb-3">
@@ -57,27 +60,8 @@ export default async function Post({ params }) {
                         </p>
                     </div>
 
-                    {/* --- START DIAGNOSTIC TEST --- */}
-                    {/* We are commenting out the dangerous part */}
-                    {/*
-                    <div
-                        dangerouslySetInnerHTML={{
-                            __html: postData.contentHtml,
-                        }}
-                    />
-                    */}
-
-                    {/* And replacing it with this safe placeholder */}
-                    <div>
-                        <h2>Testing...</h2>
-                        <p>
-                            If you can see this text after clicking "Read More",
-                            it means the navigation worked and the problem is
-                            definitely with the HTML content from the markdown
-                            file.
-                        </p>
-                    </div>
-                    {/* --- END DIAGNOSTIC TEST --- */}
+                    {/* PERMANENT FIX: Use the ReactMarkdown component */}
+                    <ReactMarkdown>{postData.content}</ReactMarkdown>
                 </div>
             </div>
         </article>
