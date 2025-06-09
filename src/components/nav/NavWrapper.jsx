@@ -1,3 +1,4 @@
+// src/components/nav/NavWrapper.jsx
 "use client";
 import { useState, useEffect, useMemo } from "react";
 import { usePathname } from "next/navigation";
@@ -9,35 +10,35 @@ export default function NavWrapper() {
     const [isScrolled, setIsScrolled] = useState(false);
     const pathname = usePathname();
 
-    // Memoize the media query object to prevent re-creation on every render
+    // FIX: Add a 'hasMounted' state to prevent rendering on the server.
+    const [hasMounted, setHasMounted] = useState(false);
+
     const mediaQuery = useMemo(() => ({ maxWidth: 768 }), []);
     const isMobile = useMedia(mediaQuery);
 
     useEffect(() => {
-        // Define the scroll handler function
+        setHasMounted(true);
+
         const handleScroll = () => {
             const offset = window.scrollY;
             setIsScrolled(offset > 50);
         };
 
-        // Check if we are on the homepage
         if (pathname === "/") {
-            // Set the initial state based on the current scroll position
             handleScroll();
-
-            // Add the scroll event listener
             window.addEventListener("scroll", handleScroll);
-
-            // Return a cleanup function to remove the listener when the component unmounts
-            // or when the path changes.
             return () => {
                 window.removeEventListener("scroll", handleScroll);
             };
         } else {
-            // If we are not on the homepage, just set the navbar to the "scrolled" state (purple).
             setIsScrolled(true);
         }
-    }, [pathname]); // This effect re-runs whenever the page path changes
+    }, [pathname]);
+
+    // FIX: Don't render anything until the component has mounted on the client.
+    if (!hasMounted) {
+        return null;
+    }
 
     return isMobile ? (
         <PocketNav isScrolled={isScrolled} />
