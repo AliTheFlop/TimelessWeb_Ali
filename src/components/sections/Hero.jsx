@@ -46,20 +46,21 @@ export default function HeroSection() {
             >
                 <div className="space-y-6">
                     <motion.h1
-                        className="text-4xl md:text-6xl xl:text-7xl text-center md:text-left font-headings font-medium text-white leading-tight tracking-tighter"
+                        className="text-5xl md:text-6xl max-w-3xl text-center md:text-left font-headings font-medium text-white leading-tight tracking-tighter"
                         variants={itemVariants}
                     >
-                        Creating Websites That
-                        <br />
+                        Making Your Business <br />{" "}
                         <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            Win Clients
+                            Look Good{" "}
                         </span>
+                        Online.
                     </motion.h1>
                     <motion.p
-                        className="md:text-xl lg:text-2xl text-center text-gray-300 md:text-left"
+                        className="text-lg md:text-xl text-gray-300 text-center md:text-left max-w-xl"
                         variants={itemVariants}
                     >
-                        Getting more customers to convert on your website.
+                        We help you turn visitors into clients with clarity,
+                        trust, and a clean design.
                     </motion.p>
                 </div>
 

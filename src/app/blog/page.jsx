@@ -17,7 +17,7 @@ export default function BlogIndexPage() {
             <div className="container mx-auto max-w-4xl">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-5xl font-primary font-medium leading-tight mb-4 text-purple-600">
-                        The TimelessWeb Blog
+                        The Timeless Web Blog
                     </h1>
                     <p className="text-xl text-gray-600 max-w-2xl mx-auto font-text">
                         Insights on web design, development, and growing your
@@ -34,7 +34,7 @@ export default function BlogIndexPage() {
                             <h2 className="text-3xl font-headings text-purple-600 mb-2">
                                 <Link
                                     href={`/blog/${id}`}
-                                    className="hover:underline"
+                                    className="hover:underline "
                                 >
                                     {title}
                                 </Link>

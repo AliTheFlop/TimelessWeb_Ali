@@ -117,7 +117,11 @@ export default function PocketNav({ isScrolled }) {
                         >
                             About Us
                         </Link> */}
-                        <Link href="/blog" className={linkClass("/blog")}>
+                        <Link
+                            href="/blog"
+                            onClick={handleLinkClick}
+                            className="text-gray-800 hover:text-purple-600"
+                        >
                             Blog
                         </Link>
                         <Link // Changed from <a> to <Link>
