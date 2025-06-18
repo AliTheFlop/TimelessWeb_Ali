@@ -1,40 +1,42 @@
 {
-  "name": "timelessweb",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@adz946/true-name": "^1.0.1",
-    "@fortawesome/fontawesome-svg-core": "^6.7.2",
-    "@fortawesome/free-solid-svg-icons": "^6.7.2",
-    "@fortawesome/react-fontawesome": "^0.2.2",
-    "@tailwindcss/typography": "^0.5.16",
-    "clsx": "^2.1.1",
-    "framer-motion": "^12.16.0",
-    "gray-matter": "^4.0.3",
-    "lucide-react": "^0.503.0",
-    "next": "15.3.1",
-    "prop-types": "^15.8.1",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-markdown": "^10.1.0",
-    "remark": "^15.0.1",
-    "remark-html": "^16.0.1",
-    "timelessweb": "file:",
-    "use-media": "^1.5.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4.1.4",
-    "autoprefixer": "^10.4.21",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.1",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.4"
-  }
+    "name": "timelessweb",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "sitemap": "next-sitemap"
+    },
+    "dependencies": {
+        "@adz946/true-name": "^1.0.1",
+        "@fortawesome/fontawesome-svg-core": "^6.7.2",
+        "@fortawesome/free-solid-svg-icons": "^6.7.2",
+        "@fortawesome/react-fontawesome": "^0.2.2",
+        "@tailwindcss/typography": "^0.5.16",
+        "clsx": "^2.1.1",
+        "framer-motion": "^12.16.0",
+        "gray-matter": "^4.0.3",
+        "lucide-react": "^0.503.0",
+        "next": "15.3.1",
+        "prop-types": "^15.8.1",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-markdown": "^10.1.0",
+        "remark": "^15.0.1",
+        "remark-html": "^16.0.1",
+        "timelessweb": "file:",
+        "use-media": "^1.5.0"
+    },
+    "devDependencies": {
+        "@eslint/eslintrc": "^3",
+        "@tailwindcss/postcss": "^4.1.4",
+        "autoprefixer": "^10.4.21",
+        "eslint": "^9",
+        "eslint-config-next": "15.3.1",
+        "next-sitemap": "^4.2.3",
+        "postcss": "^8.5.3",
+        "tailwindcss": "^4.1.4"
+    }
 }
