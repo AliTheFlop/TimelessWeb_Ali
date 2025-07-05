@@ -7,7 +7,8 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "sitemap": "next-sitemap"
+        "sitemap": "next-sitemap",
+        "full": "npm run sitemap && npm run build"
     },
     "dependencies": {
         "@adz946/true-name": "^1.0.1",
