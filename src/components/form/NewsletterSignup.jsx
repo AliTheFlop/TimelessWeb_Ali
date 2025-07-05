@@ -5,7 +5,7 @@ import FormLabel from "@/components/form/FormLabel";
 import Button from "@/components/ui/Button";
 import { CheckCircle2 } from "lucide-react";
 
-const FORMSPARK_FORM_ID = "k2BmGYeHC";
+const FORMSPARK_FORM_ID = "gOn7CttwE";
 
 export default function NewsletterSignup() {
     const [form, setForm] = useState({ name: "", email: "" });
