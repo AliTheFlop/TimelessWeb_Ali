@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
     try {
         const postData = await getPostData(params.slug);
         return {
-            title: `${postData.title} | TimelessWeb Blog`,
+            title: `${postData.title} | Timeless Web - Sydney Web Designer`,
             description: postData.excerpt,
         };
     } catch (error) {

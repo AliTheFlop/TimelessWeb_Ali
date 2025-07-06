@@ -4,8 +4,9 @@ import PropTypes from "prop-types";
 import NavWrapper from "@/components/nav/NavWrapper";
 
 export const metadata = {
-    title: "TimelessWeb | Web Design",
-    description: "Modern websites tailored for your brand — TimelessWeb.com.au",
+    title: "Timeless Web | Sydney Web Designer",
+    description:
+        "Modern websites that help grow your business. Timeless Web builds high-converting, low-maintenance websites for Sydney-based businesses that want more sales, less admin, and a better brand image.",
 };
 
 export default function RootLayout({ children }) {

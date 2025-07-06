@@ -1,6 +1,6 @@
 ---
 title: "Issues With Sydney Web Designers"
-date: "2025-06-08"
+date: "8th June 2025"
 excerpt: "Just because a website looks great, doesn't mean it works. I'll explain why this is the case"
 author: "The Timeless Web Team"
 ---
