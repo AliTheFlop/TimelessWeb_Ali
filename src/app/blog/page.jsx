@@ -1,7 +1,6 @@
 // src/app/blog/page.jsx
 import Link from "next/link";
 import { getSortedPostsData } from "@/lib/posts";
-import Button from "@/components/ui/Button";
 
 export const metadata = {
     title: "Blog | TimelessWeb",
@@ -13,55 +12,45 @@ export default function BlogIndexPage() {
     const allPosts = getSortedPostsData();
 
     return (
-        <div className="bg-slate-50 min-h-screen py-40 px-4 md:px-6">
-            <div className="container mx-auto max-w-4xl">
+        <div className="bg-white min-h-screen py-32 px-4 md:px-6">
+            <div className="container mx-auto max-w-3xl">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl md:text-5xl font-primary font-medium leading-tight mb-4 text-purple-600">
+                    <h1 className="text-3xl font-primary text-purple-600 mb-3">
                         The Timeless Web Blog
                     </h1>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto font-text">
-                        Insights on web design, development, and growing your
+                    <p className="text-gray-500 text-base">
+                        Practical insights on web design and growing your
                         business online.
                     </p>
                 </div>
 
-                <div className="space-y-12">
+                <div className="space-y-8">
                     {allPosts.map(({ id, date, title, excerpt }) => (
                         <article
                             key={id}
-                            className="bg-white p-8 rounded-lg shadow-lg transition-transform hover:scale-105"
+                            className="border border-gray-200 rounded-xl p-6 hover:border-purple-300 transition-colors"
                         >
-                            <h2 className="text-3xl font-headings text-purple-600 mb-2">
+                            <h2 className="text-xl font-headings text-purple-700 mb-1">
                                 <Link
                                     href={`/blog/${id}`}
-                                    className="hover:underline "
+                                    className="hover:underline"
                                 >
                                     {title}
                                 </Link>
                             </h2>
-                            <div className="text-sm text-gray-500 mb-4">
-                                <time dateTime={date}>
-                                    {new Date(date).toLocaleDateString(
-                                        "en-US",
-                                        {
-                                            year: "numeric",
-                                            month: "long",
-                                            day: "numeric",
-                                        }
-                                    )}
-                                </time>
-                            </div>
-                            <p className="font-text text-gray-700 leading-relaxed mb-6">
+                            <time
+                                dateTime={date}
+                                className="block text-sm text-gray-400 mb-3"
+                            >
+                                {new Date(date).toLocaleDateString("en-US", {
+                                    year: "numeric",
+                                    month: "long",
+                                    day: "numeric",
+                                })}
+                            </time>
+                            <p className="text-gray-600 text-sm leading-relaxed">
                                 {excerpt}
                             </p>
-                            <Button
-                                href={`/blog/${id}`}
-                                variant="secondary"
-                                fullWidth={false}
-                                prefetch={false}
-                            >
-                                Read More
-                            </Button>
                         </article>
                     ))}
                 </div>

@@ -3,15 +3,11 @@ import { getPostData, getAllPostIds } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
-// All other functions (generateStaticParams, generateMetadata) remain the same.
-
-// SEO: Generate static pages for all posts at build time
 export async function generateStaticParams() {
     const paths = getAllPostIds();
     return paths.map((path) => ({ slug: path.params.slug }));
 }
 
-// SEO: Generate dynamic metadata for each post
 export async function generateMetadata({ params }) {
     try {
         const postData = await getPostData(params.slug);
@@ -19,7 +15,7 @@ export async function generateMetadata({ params }) {
             title: `${postData.title} | Timeless Web - Sydney Web Designer`,
             description: postData.excerpt,
         };
-    } catch (error) {
+    } catch {
         return {
             title: "Post Not Found",
             description: "This post could not be found.",
@@ -30,37 +26,34 @@ export async function generateMetadata({ params }) {
 export default async function Post({ params }) {
     let postData;
     try {
-        // getPostData now returns 'content' instead of 'contentHtml'
         postData = await getPostData(params.slug);
     } catch (error) {
         notFound();
     }
 
     return (
-        <article className="bg-white min-h-screen py-40 px-4 md:px-6">
-            <div className="container mx-auto">
-                {/* Your 'prose' classes will style the output of ReactMarkdown */}
-                <div className="prose lg:prose-xl max-w-3xl mx-auto">
-                    <div className="border-b pb-4 mb-8">
-                        <h1 className="text-4xl md:text-5xl !text-purple-600 font-primary !mb-3">
-                            {postData.title}
-                        </h1>
-                        <p className="text-base !text-gray-500">
-                            By {postData.author} on{" "}
-                            <time dateTime={postData.date}>
-                                {new Date(postData.date).toLocaleDateString(
-                                    "en-US",
-                                    {
-                                        year: "numeric",
-                                        month: "long",
-                                        day: "numeric",
-                                    }
-                                )}
-                            </time>
-                        </p>
-                    </div>
+        <article className="bg-white min-h-screen py-28 px-4 md:px-6">
+            <div className="container mx-auto max-w-2xl">
+                <header className="mb-8">
+                    <h1 className="text-3xl text-purple-700 font-primary mb-2">
+                        {postData.title}
+                    </h1>
+                    <p className="text-sm text-gray-500">
+                        By {postData.author} on{" "}
+                        <time dateTime={postData.date}>
+                            {new Date(postData.date).toLocaleDateString(
+                                "en-US",
+                                {
+                                    year: "numeric",
+                                    month: "long",
+                                    day: "numeric",
+                                }
+                            )}
+                        </time>
+                    </p>
+                </header>
 
-                    {/* PERMANENT FIX: Use the ReactMarkdown component */}
+                <div className="prose prose-neutral max-w-none">
                     <ReactMarkdown>{postData.content}</ReactMarkdown>
                 </div>
             </div>
