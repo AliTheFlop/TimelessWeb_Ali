@@ -15,10 +15,11 @@ export default function FinalCTA() {
         >
             <div className="w-full max-w-[80%] flex flex-col items-center gap-8 h-auto text-purple-600">
                 <h2 className="font-primary font-bold text-3xl lg:text-4xl text-center lg:text-left ">
-                    Let&apos;s Get Your Business Online
+                    Let&apos;s Build Something You&apos;re Proud To Share.
                 </h2>
                 <p className="font-text text-lg text-center lg:text-left ">
-                    Contact us to get started
+                    Get a clean, modern site built around your vision - with
+                    clear communication every step of the way.
                 </p>
                 <Button
                     href="/contact"

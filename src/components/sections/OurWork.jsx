@@ -67,11 +67,11 @@ export default function OurWork() {
                         className="flex flex-col gap-2 mb-10"
                     >
                         <h2 className="font-primary text-3xl lg:text-4xl text-center lg:text-left text-purple-600">
-                            We&apos;ve Done This Before
+                            You&apos;re In Good Hands. Here&apos;s Proof.
                         </h2>
                         <p className="font-text text-lg text-center lg:text-left">
-                            Here&apos;s some work we&apos;ve done before to show
-                            you we mean business:
+                            We&apos;ve helped businesses of all sizes look
+                            professional and grow online.
                         </p>
                     </motion.div>
                     <motion.div

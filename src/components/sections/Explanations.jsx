@@ -10,22 +10,21 @@ export default function Explanations() {
                     {/* Text Content Column */}
                     <div className="flex flex-col gap-6 justify-center lg:pr-8">
                         <h2 className="text-3xl md:text-4xl text-purple-600 font-primary text-center lg:text-start">
-                            Get More Sales
+                            Your Website Should Work While You Sleep
                         </h2>
                         <p className="font-text text-lg text-gray-700 text-center lg:text-start leading-relaxed">
-                            A good website doesn&apos;t take a break. It answers
-                            questions, filters out time-wasters, and helps
-                            visitors understand what you do - without you
-                            picking up the phone.
+                            It answers questions, filters out time-wasters, and
+                            helps visitors understand what you do - without you
+                            picking up the phone. You'll get:
                         </p>
                         <ul className="text-base md:text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
-                                Get more clients
+                                More Client Inquiries
                             </li>
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
-                                No extra work from you
+                                Less time answering the same questions
                             </li>
                         </ul>
 
@@ -70,21 +69,21 @@ export default function Explanations() {
                     {/* Text Content Column */}
                     <div className="flex flex-col gap-6 justify-center lg:pr-8 order-1 lg:order-2">
                         <h2 className="text-3xl md:text-4xl text-purple-600 font-primary text-center lg:text-start">
-                            Do Less Admin Work
+                            Spend More Time Doing What You Love.
                         </h2>
                         <p className="font-text text-lg text-gray-700 text-center lg:text-start leading-relaxed">
-                            A smart website answers your customers questions,
-                            books appointments, and filters out the tire-kickers
-                            so you only deal with real business. You get:
+                            A smart website answers questions, books
+                            appointments, and filters out the time-wasters so
+                            you only deal with real business. That means:
                         </p>
                         <ul className="text-base md:text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
-                                Less administrative work
+                                Less repetitive admin work & stress
                             </li>
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
-                                Less headache and stress
+                                More time to focus on your business
                             </li>
                         </ul>
 
@@ -106,21 +105,22 @@ export default function Explanations() {
                     {/* Text Content Column */}
                     <div className="flex flex-col gap-6 justify-center lg:pr-8">
                         <h2 className="text-3xl md:text-4xl text-purple-600 font-primary text-center lg:text-start">
-                            Build A Better Brand Image
+                            Look The Part & Earn Their Trust.
                         </h2>
                         <p className="font-text text-lg text-gray-700 text-center lg:text-start leading-relaxed">
-                            Your website uplifts your brand with a design that
-                            makes people remember and want to do more business
+                            Your website makes you look established and
+                            trustworthy so visitors want to do more business
                             with you.
                         </p>
                         <ul className="text-base md:text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
-                                Build more trust with customers
+                                Make a great first impression
                             </li>
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
-                                Uplift your brand image
+                                Reflect your brand with a design that feels like
+                                you
                             </li>
                         </ul>
 

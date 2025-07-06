@@ -49,9 +49,9 @@ export default function HeroSection() {
                         className="text-5xl md:text-6xl max-w-3xl text-center md:text-left font-headings font-medium text-white leading-tight tracking-tighter"
                         variants={itemVariants}
                     >
-                        Making Your Business <br />{" "}
+                        Making Your Business Look <br />{" "}
                         <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            Look Good{" "}
+                            Professional{" "}
                         </span>
                         Online.
                     </motion.h1>
@@ -59,8 +59,9 @@ export default function HeroSection() {
                         className="text-lg md:text-xl text-gray-300 text-center md:text-left max-w-xl"
                         variants={itemVariants}
                     >
-                        We help you turn visitors into clients with clarity,
-                        trust, and a clean design.
+                        We help small business owners turn their vision into a
+                        stunning, modern website that builds trust with their
+                        audience.
                     </motion.p>
                 </div>
 

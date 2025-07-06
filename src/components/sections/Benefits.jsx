@@ -40,11 +40,12 @@ export default function Benefits() {
                         className="flex flex-col gap-2 mb-10"
                     >
                         <h2 className="font-primary text-3xl lg:text-4xl text-center lg:text-left text-purple-600">
-                            We Save You Time & Effort
+                            We Handle the Tech, So You Don&apos;t Have To.
                         </h2>
                         <p className="font-text text-lg text-center lg:text-left">
-                            There&apos;s no need to learn technical mumbo jumbo.
-                            We&apos;re here to do it for you.
+                            You're busy running a business, so let us handle the
+                            setup, updates, and security so you can stay focused
+                            on growth.
                         </p>
                     </motion.div>
                     <motion.div
@@ -60,8 +61,8 @@ export default function Benefits() {
                                 Hosting
                             </h3>
                             <p className="font-text text-center  pt-4">
-                                Your website will be online 24/7 with a 99%
-                                uptime guarantee.
+                                Your site runs 24/7 with 99% uptime. Fast,
+                                reliable, always online.
                             </p>
                         </motion.div>
                         <motion.div
@@ -73,8 +74,8 @@ export default function Benefits() {
                                 Maintenance
                             </h3>
                             <p className="font-text text-center pt-4">
-                                You run your business, we handle the website.
-                                Includes content & security updates.
+                                We manage updates, backups, and tweaks. No tech
+                                headaches for you.
                             </p>
                         </motion.div>
                         <motion.div
@@ -86,9 +87,8 @@ export default function Benefits() {
                                 Security
                             </h3>
                             <p className="font-text text-center  pt-4">
-                                Get enterprise-grade security to keep hackers{" "}
-                                <span className="italic">out</span> of your
-                                business.
+                                Enterprise-grade security to protect your site
+                                from hackers and downtime.
                             </p>
                         </motion.div>
                     </motion.div>
