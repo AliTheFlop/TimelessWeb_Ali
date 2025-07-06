@@ -32,31 +32,33 @@ export default async function Post({ params }) {
     }
 
     return (
-        <article className="bg-white min-h-screen py-28 px-4 md:px-6">
-            <div className="container mx-auto max-w-2xl">
-                <header className="mb-8">
-                    <h1 className="text-3xl text-purple-700 font-primary mb-2">
-                        {postData.title}
-                    </h1>
-                    <p className="text-sm text-gray-500">
-                        By {postData.author} on{" "}
-                        <time dateTime={postData.date}>
-                            {new Date(postData.date).toLocaleDateString(
-                                "en-US",
-                                {
-                                    year: "numeric",
-                                    month: "long",
-                                    day: "numeric",
-                                }
-                            )}
-                        </time>
-                    </p>
-                </header>
+        <div className="bg-white min-h-screen pt-32 pb-16 px-4 md:px-6">
+            <div className="container mx-auto max-w-3xl">
+                <div className="bg-white border border-gray-200 rounded-xl shadow-sm px-6 md:px-10 py-10 md:py-14">
+                    <article
+                        className="prose prose-base md:prose-lg prose-neutral max-w-none 
+            prose-headings:font-primary 
+            prose-headings:text-purple-600 
+            prose-p:text-gray-800 
+            prose-a:text-purple-600 hover:prose-a:underline 
+            prose-strong:text-purple-600 
+            prose-li:marker:text-purple-600"
+                    >
+                        <h1>{postData.title}</h1>
 
-                <div className="prose prose-neutral max-w-none">
-                    <ReactMarkdown>{postData.content}</ReactMarkdown>
+                        <p className="text-sm text-gray-500">
+                            By {postData.author} ·{" "}
+                            <time dateTime={postData.date}>
+                                {postData.date}
+                            </time>
+                        </p>
+
+                        <hr className="my-6 border-gray-200" />
+
+                        <ReactMarkdown>{postData.content}</ReactMarkdown>
+                    </article>
                 </div>
             </div>
-        </article>
+        </div>
     );
 }

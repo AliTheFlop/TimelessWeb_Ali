@@ -11,6 +11,7 @@ html {
     --font-text: "Inter", sans-serif;
     --font-headings: "Poppins", sans-serif;
     --color-headings: #2d2d2d;
+    --color-brand: #9810fa;
 }
 
 /* Tailwind-compatible custom scrollbar */

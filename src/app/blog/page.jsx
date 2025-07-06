@@ -12,7 +12,7 @@ export default function BlogIndexPage() {
     const allPosts = getSortedPostsData();
 
     return (
-        <div className="bg-white min-h-screen py-32 px-4 md:px-6">
+        <div className="bg-white min-h-screen pt-32 pb-16 px-4 md:px-6">
             <div className="container mx-auto max-w-3xl">
                 <div className="text-center mb-16">
                     <h1 className="text-3xl font-primary text-purple-600 mb-3">
@@ -42,11 +42,7 @@ export default function BlogIndexPage() {
                                 dateTime={date}
                                 className="block text-sm text-gray-400 mb-3"
                             >
-                                {new Date(date).toLocaleDateString("en-US", {
-                                    year: "numeric",
-                                    month: "long",
-                                    day: "numeric",
-                                })}
+                                {date}
                             </time>
                             <p className="text-gray-600 text-sm leading-relaxed">
                                 {excerpt}

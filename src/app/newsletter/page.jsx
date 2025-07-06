@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function NewsletterPage() {
     return (
-        <div className="bg-slate-50 py-32 px-4 min-h-screen">
+        <div className="bg-white min-h-screen pt-32 pb-16 px-4 md:px-6">
             <div className="max-w-3xl mx-auto text-center mb-12">
                 <h1 className="text-4xl font-headings font-semibold text-purple-600 mb-4">
                     The Ultimate Website Newsletter
