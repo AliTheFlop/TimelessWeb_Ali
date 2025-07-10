@@ -2,6 +2,9 @@ import "@/lib/fontAwesome.js";
 import "@/styles/globals.css";
 import PropTypes from "prop-types";
 import NavWrapper from "@/components/nav/NavWrapper";
+import { Suspense } from "react";
+import FacebookPixelEvents from "@/components/tracking/FacebookPixelEvents";
+import Script from "next/script";
 
 export const metadata = {
     title: "Timeless Web | Sydney Web Designer",
@@ -23,6 +26,34 @@ export default function RootLayout({ children }) {
                     href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
                     rel="stylesheet"
                 />
+                {/* Facebook Pixel Code */}
+                <Script
+                    id="fb-pixel"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '1298515491759392');
+              fbq('track', 'PageView');
+            `,
+                    }}
+                />
+                <noscript>
+                    <img
+                        height="1"
+                        width="1"
+                        style={{ display: "none" }}
+                        src="https://www.facebook.com/tr?id=1298515491759392&ev=PageView&noscript=1"
+                        alt=""
+                    />
+                </noscript>
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
@@ -61,6 +92,9 @@ export default function RootLayout({ children }) {
                         </p>
                     </div>
                 </footer>
+                <Suspense fallback={null}>
+                    <FacebookPixelEvents />
+                </Suspense>
             </body>
         </html>
     );
