@@ -129,7 +129,7 @@ export default function PocketNav({ isScrolled }) {
                             onClick={handleLinkClick}
                             className="bg-white text-purple-600 border border-purple-600 font-semibold px-4 py-2 rounded hover:bg-purple-100 transition" // Matched styling
                         >
-                            Get A Free Quote
+                            Contact Us
                         </Link>
                     </nav>
                 </div>

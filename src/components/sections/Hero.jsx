@@ -71,7 +71,7 @@ export default function HeroSection() {
                         className="group text-base px-8 py-4"
                         fullWidth={false}
                     >
-                        Get A Free Quote
+                        Contact Us
                         <ArrowRight className="ml-2 w-4 h-4 inline-block group-hover:translate-x-1 transition-transform" />
                     </Button>
                 </motion.div>

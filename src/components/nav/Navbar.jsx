@@ -57,7 +57,7 @@ export default function Navbar({ isScrolled }) {
                         href="/contact"
                         className={linkClass("/contact", true)}
                     >
-                        Get A Free Quote
+                        Contact Us
                     </Link>
                 </div>
             </div>
