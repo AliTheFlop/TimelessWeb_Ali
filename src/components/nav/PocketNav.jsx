@@ -1,13 +1,13 @@
-"use client";
-import Link from "next/link";
-import { useState } from "react";
-import { usePathname } from "next/navigation";
-import Button from "@/components/ui/Button";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { Menu } from "lucide-react";
-import Logo from "../ui/Logo";
-import clsx from "clsx";
+'use client';
+import Link from 'next/link';
+import { useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Button from '@/components/ui/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { Menu } from 'lucide-react';
+import Logo from '../ui/Logo';
+import clsx from 'clsx';
 
 export default function PocketNav({ isScrolled }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,12 +26,12 @@ export default function PocketNav({ isScrolled }) {
     const linkClass = (href, isButton = false) => {
         let classes = `text-white hover:underline transition ${
             pathname === href
-                ? "font-semibold underline underline-offset-4"
-                : ""
+                ? 'font-semibold underline underline-offset-4'
+                : ''
         }`;
         if (isButton) {
             classes = `bg-white text-purple-600 font-semibold px-4 py-2 rounded hover:bg-purple-100 transition ${
-                pathname === href ? "ring-2 ring-purple-300" : "" // Example active style for button
+                pathname === href ? 'ring-2 ring-purple-300' : '' // Example active style for button
             }`;
         }
         return classes;
@@ -41,10 +41,10 @@ export default function PocketNav({ isScrolled }) {
         <>
             <div
                 className={clsx(
-                    "fixed top-0 left-0 right-0 p-4 flex justify-between items-center text-white z-50 transition-colors duration-300",
+                    'fixed top-0 left-0 right-0 p-4 flex justify-between items-center text-white z-50 transition-colors duration-300',
                     {
-                        "bg-purple-600": isScrolled,
-                        "bg-transparent": !isScrolled,
+                        'bg-black': isScrolled,
+                        'bg-transparent': !isScrolled,
                     }
                 )}
             >
@@ -64,7 +64,7 @@ export default function PocketNav({ isScrolled }) {
 
             <div
                 className={`fixed top-0 left-0 h-screen w-screen z-50 transition-transform duration-300 ease-in-out ${
-                    isOpen ? "translate-x-0" : "-translate-x-full"
+                    isOpen ? 'translate-x-0' : '-translate-x-full'
                 }`}
             >
                 {/* Overlay to close menu */}
@@ -75,7 +75,7 @@ export default function PocketNav({ isScrolled }) {
                 ></button>
 
                 <div className="relative bg-white h-full w-4/5 max-w-sm p-6 shadow-lg z-[51]">
-                    {" "}
+                    {' '}
                     {/* Increased z-index */}
                     <Button
                         onClick={handleClose}
@@ -87,7 +87,7 @@ export default function PocketNav({ isScrolled }) {
                         <FontAwesomeIcon icon={faTimes} />
                     </Button>
                     <nav className="flex flex-col gap-6 mt-16 text-lg font-medium font-primary">
-                        {" "}
+                        {' '}
                         {/* Added font-primary and mt */}
                         <Link
                             href="/"

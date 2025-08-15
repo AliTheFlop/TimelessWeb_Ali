@@ -1,7 +1,7 @@
 // src/components/sections/Benefits.jsx
-"use client";
-import { AppWindowMac, Cog, GlobeLock } from "lucide-react";
-import { motion } from "framer-motion";
+'use client';
+import { AppWindowMac, Cog, GlobeLock } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Benefits() {
     const containerVariants = {
@@ -37,12 +37,15 @@ export default function Benefits() {
                 <div className="flex flex-col gap-8">
                     <motion.div
                         variants={itemVariants}
-                        className="flex flex-col gap-2 mb-10"
+                        className="flex flex-col items-center gap-2 mb-10"
                     >
-                        <h2 className="font-primary text-3xl lg:text-4xl text-center lg:text-left text-purple-600">
+                        <div className="bg-purple-100 text-purple-600 font-semibold text-sm px-4 py-1 rounded-full mb-2">
+                            What We Do
+                        </div>
+                        <h2 className="font-primary font-semibold text-gray-900 text-3xl lg:text-4xl text-center">
                             We Handle the Tech, So You Don&apos;t Have To.
                         </h2>
-                        <p className="font-text text-lg text-center lg:text-left">
+                        <p className="font-text text-lg text-cente text-gray-600">
                             You're busy running a business, so let us handle the
                             setup, updates, and security so you can stay focused
                             on growth.
