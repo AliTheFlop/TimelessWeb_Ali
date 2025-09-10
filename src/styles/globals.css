@@ -42,3 +42,21 @@ html {
 .animated-glow.visible {
     opacity: 1;
 }
+
+/* LENIS SMOOTH SCROLL STUFF */
+
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none;
+}

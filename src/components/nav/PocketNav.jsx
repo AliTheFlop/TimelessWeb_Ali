@@ -118,6 +118,13 @@ export default function PocketNav({ isScrolled }) {
                             About Us
                         </Link> */}
                         <Link
+                            href="/packages"
+                            onClick={handleLinkClick}
+                            className="text-gray-800 hover:text-purple-600"
+                        >
+                            Packages
+                        </Link>
+                        <Link
                             href="/blog"
                             onClick={handleLinkClick}
                             className="text-gray-800 hover:text-purple-600"

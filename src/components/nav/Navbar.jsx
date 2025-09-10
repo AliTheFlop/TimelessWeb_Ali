@@ -50,6 +50,9 @@ export default function Navbar({ isScrolled }) {
                     <Link href="/about" className={linkClass("/about")}>
                         About Us
                     </Link> */}
+                    <Link href="/packages" className={linkClass("/packages")}>
+                        Packages
+                    </Link>
                     <Link href="/blog" className={linkClass("/blog")}>
                         Blog
                     </Link>
