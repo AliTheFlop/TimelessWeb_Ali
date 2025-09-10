@@ -1,8 +1,8 @@
-'use client';
-import Button from '@/components/ui/Button';
-import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+"use client";
+import Button from "@/components/ui/Button";
+import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 export default function HeroSection() {
     const [showBg, setShowBg] = useState(false);
 
@@ -35,7 +35,7 @@ export default function HeroSection() {
         <section className="relative flex items-center justify-center min-h-screen w-full bg-[#030303] py-24 px-4">
             <div
                 className={`animated-glow absolute inset-0 z-0 pointer-events-none${
-                    showBg ? ' visible' : ''
+                    showBg ? " visible" : ""
                 }`}
             ></div>
             <motion.div
@@ -49,9 +49,9 @@ export default function HeroSection() {
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pt-8 md:pt-0 max-w-3xl text-center md:text-left font-headings font-medium text-white leading-tight tracking-tighter"
                         variants={itemVariants}
                     >
-                        Making Your Business Look <br />{' '}
+                        Making Your Business Look <br />{" "}
                         <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            Professional{' '}
+                            Professional{" "}
                         </span>
                         Online.
                     </motion.h1>

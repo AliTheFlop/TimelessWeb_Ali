@@ -1,7 +1,7 @@
 // src/components/sections/Benefits.jsx
-'use client';
-import { AppWindowMac, Cog, GlobeLock } from 'lucide-react';
-import { motion } from 'framer-motion';
+"use client";
+import { AppWindowMac, Cog, GlobeLock } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Benefits() {
     const containerVariants = {
