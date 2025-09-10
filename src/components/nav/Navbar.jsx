@@ -24,9 +24,9 @@ export default function Navbar({ isScrolled }) {
     return (
         <nav
             className={clsx(
-                "fixed top-0 left-0 z-50 w-full flex items-center justify-center py-4 transition-all duration-300",
+                "fixed top-0 left-0 z-50 w-full flex items-center justify-center py-2 transition-all duration-300",
                 {
-                    "bg-black shadow-md": isScrolled,
+                    "bg-[#080808] shadow-md": isScrolled,
                     "bg-transparent": !isScrolled,
                 }
             )}
@@ -34,7 +34,7 @@ export default function Navbar({ isScrolled }) {
             <div className="w-full max-w-[80%] flex items-center justify-between">
                 <div className="text-white text-2xl font-bold font-lexend tracking-tight">
                     <Link href="/">
-                        <Logo width="120" height="70" className="" />
+                        <Logo width="100" height="70" className="" />
                     </Link>
                 </div>
                 <div className="flex items-center gap-6 font-primary">

@@ -1,42 +1,41 @@
 "use client";
 
-import { motion } from "framer-motion";
-import PropTypes from "prop-types";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export default function AnimateOnScroll({
-    children,
-    delay = 0,
-    duration = 0.5,
-    y = 20,
-}) {
-    const variants = {
-        hidden: { opacity: 0, y: y },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration,
-                delay,
-                ease: "easeOut",
+export default function AnimateOnScroll({ children, className }) {
+    const ref = useRef(null);
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const element = ref.current;
+
+        gsap.fromTo(
+            element,
+            {
+                opacity: 0,
+                y: 50, // Start 50px below its final position
             },
-        },
-    };
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1, // Animation duration of 1 second
+                ease: "power3.out", // A nice easing function
+                scrollTrigger: {
+                    trigger: element,
+                    start: "top 80%", // Start the animation when the top of the element is 80% from the top of the viewport
+                    end: "bottom 20%", // End the animation when the bottom of the element is 20% from the top of the viewport
+                    toggleActions: "play none none none", // Play the animation once when it enters the viewport
+                },
+            }
+        );
+    }, []);
 
     return (
-        <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={variants}
-        >
+        <div ref={ref} className={className}>
             {children}
-        </motion.div>
+        </div>
     );
 }
-
-AnimateOnScroll.propTypes = {
-    children: PropTypes.node.isRequired,
-    delay: PropTypes.number,
-    duration: PropTypes.number,
-    y: PropTypes.number,
-};
