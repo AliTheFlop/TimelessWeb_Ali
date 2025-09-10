@@ -1,32 +1,32 @@
 // src/components/sections/OurWork.jsx
-"use client";
-import ProjectImage from "../ui/ProjectImage";
-import { motion } from "framer-motion";
+'use client';
+import ProjectImage from '../ui/ProjectImage';
+import { motion } from 'framer-motion';
 
 const projectsComplete = [
     {
-        name: "Brooklyn Boy Bagels",
-        description: "Providing NYC Bagels In Sydney",
-        imgSrc: "/homepage/projects/brooklynboybagels.webp",
-        colour: "#A90B81",
+        name: 'Brooklyn Boy Bagels',
+        description: 'Providing NYC Bagels In Sydney',
+        imgSrc: '/homepage/projects/brooklynboybagels.webp',
+        colour: '#A90B81',
         key: 1,
-        id: "brooklynboybagels",
+        id: 'brooklynboybagels',
     },
     {
-        name: "Positive Cables",
-        description: "Residential Electrician Contractor In Sydney",
-        imgSrc: "/homepage/projects/positivecables.webp",
-        colour: "#0B3DA9",
+        name: 'Positive Cables',
+        description: 'Residential Electrician Contractor In Sydney',
+        imgSrc: '/homepage/projects/positivecables.webp',
+        colour: '#0B3DA9',
         key: 2,
-        id: "positivecables",
+        id: 'positivecables',
     },
     {
-        name: "Altus Plumbing",
-        description: " A Local Plumber Based in Sydney, Australia",
-        imgSrc: "/homepage/projects/altusplumbing.webp",
-        colour: "#0BA96C",
+        name: 'Altus Plumbing',
+        description: ' A Local Plumber Based in Sydney, Australia',
+        imgSrc: '/homepage/projects/altusplumbing.webp',
+        colour: '#0BA96C',
         key: 3,
-        id: "altusplumbing",
+        id: 'altusplumbing',
     },
 ];
 
@@ -64,12 +64,15 @@ export default function OurWork() {
                 <div className="flex flex-col gap-8">
                     <motion.div
                         variants={itemVariants}
-                        className="flex flex-col gap-2 mb-10"
+                        className="flex flex-col items-center gap-2 mb-10"
                     >
-                        <h2 className="font-primary text-3xl lg:text-4xl text-center lg:text-left text-purple-600">
+                        <div className="bg-purple-100 text-purple-600 font-semibold text-sm px-4 py-1 rounded-full mb-2">
+                            Our Work
+                        </div>
+                        <h2 className="font-primary font-semibold text-3xl lg:text-4xl text-center text-gray-900">
                             You&apos;re In Good Hands. Here&apos;s Proof.
                         </h2>
-                        <p className="font-text text-lg text-center lg:text-left">
+                        <p className="font-text text-lg text-center text-gray-600">
                             We&apos;ve helped businesses of all sizes look
                             professional and grow online.
                         </p>

@@ -1,5 +1,5 @@
-import { CheckCircle } from "lucide-react"; // Make sure to install and import lucide-react
-import Button from "../ui/Button";
+import { CheckCircle } from 'lucide-react'; // Make sure to install and import lucide-react
+import Button from '../ui/Button';
 
 export default function Explanations() {
     return (
@@ -9,15 +9,15 @@ export default function Explanations() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Text Content Column */}
                     <div className="flex flex-col gap-6 justify-center lg:pr-8">
-                        <h2 className="text-3xl md:text-4xl text-purple-600 font-primary text-center lg:text-start">
+                        <h2 className="text-3xl md:text-4xl font-primary text-gray-900 text-center lg:text-start">
                             Your Website Should Work While You Sleep
                         </h2>
-                        <p className="font-text text-lg text-gray-700 text-center lg:text-start leading-relaxed">
+                        <p className="font-text text-lg text-gray-600 text-center lg:text-start leading-relaxed">
                             It answers questions, filters out time-wasters, and
                             helps visitors understand what you do - without you
                             picking up the phone. You'll get:
                         </p>
-                        <ul className="text-base md:text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
+                        <ul className="text-base md:text-lg font-text text-gray-600 space-y-3 text-center lg:text-start">
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
                                 More Client Inquiries
@@ -68,15 +68,15 @@ export default function Explanations() {
                     </div>
                     {/* Text Content Column */}
                     <div className="flex flex-col gap-6 justify-center lg:pr-8 order-1 lg:order-2">
-                        <h2 className="text-3xl md:text-4xl text-purple-600 font-primary text-center lg:text-start">
+                        <h2 className="text-3xl md:text-4xl font-primary text-gray-900 text-center lg:text-start">
                             Spend More Time Doing What You Love.
                         </h2>
-                        <p className="font-text text-lg text-gray-700 text-center lg:text-start leading-relaxed">
+                        <p className="font-text text-lg text-gray-600 text-center lg:text-start leading-relaxed">
                             A smart website answers questions, books
                             appointments, and filters out the time-wasters so
                             you only deal with real business. That means:
                         </p>
-                        <ul className="text-base md:text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
+                        <ul className="text-base md:text-lg font-text text-gray-600 space-y-3 text-center lg:text-start">
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
                                 Less repetitive admin work & stress
@@ -104,15 +104,15 @@ export default function Explanations() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Text Content Column */}
                     <div className="flex flex-col gap-6 justify-center lg:pr-8">
-                        <h2 className="text-3xl md:text-4xl text-purple-600 font-primary text-center lg:text-start">
+                        <h2 className="text-3xl md:text-4xl text-gray-900 font-primary text-center lg:text-start">
                             Look The Part & Earn Their Trust.
                         </h2>
-                        <p className="font-text text-lg text-gray-700 text-center lg:text-start leading-relaxed">
+                        <p className="font-text text-lg text-gray-600 text-center lg:text-start leading-relaxed">
                             Your website makes you look established and
                             trustworthy so visitors want to do more business
                             with you.
                         </p>
-                        <ul className="text-base md:text-lg font-text text-gray-700 space-y-3 text-center lg:text-start">
+                        <ul className="text-base md:text-lg font-text text-gray-600 space-y-3 text-center lg:text-start">
                             <li className="flex items-center justify-center lg:justify-start">
                                 <CheckCircle className="w-5 h-5 text-purple-600 mr-3 flex-shrink-0" />
                                 Make a great first impression
