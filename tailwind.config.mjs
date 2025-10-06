@@ -7,7 +7,12 @@ module.exports = {
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                headings: "var(--font-headings)",
+                body: "var(--font-text)",
+            },
+        },
     },
     plugins: [require("@tailwindcss/typography")],
 };
