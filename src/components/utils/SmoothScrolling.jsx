@@ -11,14 +11,23 @@ function SmoothScrolling({ children }) {
         if (lenis) {
             gsap.registerPlugin(ScrollTrigger);
 
-            lenis.on("scroll", ScrollTrigger.update);
+            const handleScroll = () => ScrollTrigger.update();
+            lenis.on("scroll", handleScroll);
 
-            gsap.ticker.add((time) => {
+            const tickerCallback = (time) => {
                 lenis.raf(time * 1000);
-            });
+            };
 
+            gsap.ticker.add(tickerCallback);
             gsap.ticker.lagSmoothing(0);
+
+            return () => {
+                lenis.off("scroll", handleScroll);
+                gsap.ticker.remove(tickerCallback);
+                gsap.ticker.lagSmoothing(1000, 16);
+            };
         }
+        return undefined;
     }, [lenis]);
 
     return (

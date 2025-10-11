@@ -5,7 +5,6 @@ import NavWrapper from "@/components/nav/NavWrapper";
 import { Suspense } from "react";
 import FacebookPixelEvents from "@/components/tracking/FacebookPixelEvents";
 import Script from "next/script";
-import SmoothScrolling from "@/components/utils/SmoothScrolling";
 
 export const metadata = {
     title: "Timeless Web | Sydney Web Designer",
@@ -82,22 +81,20 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body className="min-h-screen flex flex-col">
-                <SmoothScrolling>
-                    <NavWrapper />
-                    <main className="flex-grow">{children}</main>
+                <NavWrapper />
+                <main className="flex-grow">{children}</main>
 
-                    <footer className="bg-gray-100 w-full">
-                        <div className="bg-stone-900 w-full px-5 py-5">
-                            <p className="font-semibold text-sm text-white text-left">
-                                {" "}
-                                © {new Date().getFullYear()} TimelessWeb{" "}
-                            </p>
-                        </div>
-                    </footer>
-                    <Suspense fallback={null}>
-                        <FacebookPixelEvents />
-                    </Suspense>
-                </SmoothScrolling>
+                <footer className="bg-gray-100 w-full">
+                    <div className="bg-stone-900 w-full px-5 py-5">
+                        <p className="font-semibold text-sm text-white text-left">
+                            {" "}
+                            © {new Date().getFullYear()} TimelessWeb{" "}
+                        </p>
+                    </div>
+                </footer>
+                <Suspense fallback={null}>
+                    <FacebookPixelEvents />
+                </Suspense>
             </body>
         </html>
     );

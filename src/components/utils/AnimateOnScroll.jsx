@@ -12,7 +12,11 @@ export default function AnimateOnScroll({ children, className }) {
 
         const element = ref.current;
 
-        gsap.fromTo(
+        if (!element) {
+            return undefined;
+        }
+
+        const animation = gsap.fromTo(
             element,
             {
                 opacity: 0,
@@ -31,6 +35,11 @@ export default function AnimateOnScroll({ children, className }) {
                 },
             }
         );
+
+        return () => {
+            animation.scrollTrigger?.kill();
+            animation.kill();
+        };
     }, []);
 
     return (
