@@ -79,11 +79,11 @@ const featureList = [
 
 export default function Packages() {
     return (
-        <section className="bg-white py-24">
+        <section className="bg-white py-32">
             <div className="container mx-auto px-4">
                 {/* Title */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-800">
+                    <h2 className="text-4xl font-headings font-bold text-gray-800 mb-3">
                         Our Packages
                     </h2>
                     <p className="text-gray-600 mt-2">

@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import HeroSection from "@/components/sections/Hero";
 import OurWork from "@/components/sections/OurWork";
 import Benefits from "@/components/sections/Benefits";
@@ -6,17 +5,11 @@ import Explanations from "@/components/sections/Explanations";
 import Reviews from "@/components/sections/Reviews";
 import FinalCTA from "@/components/sections/FinalCTA";
 import AnimateOnScroll from "@/components/utils/AnimateOnScroll";
-
-const SmoothScrolling = dynamic(
-    () => import("@/components/utils/SmoothScrolling"),
-    {
-        ssr: false,
-    }
-);
+import SmoothScrollingWrapper from "@/components/utils/SmoothScrollingWrapper";
 
 export default function Home() {
     return (
-        <SmoothScrolling>
+        <SmoothScrollingWrapper>
             <HeroSection />
             <AnimateOnScroll>
                 <Benefits />
@@ -29,6 +22,6 @@ export default function Home() {
             </AnimateOnScroll>
             <Reviews />
             <FinalCTA />
-        </SmoothScrolling>
+        </SmoothScrollingWrapper>
     );
 }

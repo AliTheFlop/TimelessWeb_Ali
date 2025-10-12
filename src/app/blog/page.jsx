@@ -15,10 +15,10 @@ export default function BlogIndexPage() {
         <div className="bg-white min-h-screen pt-32 pb-16 px-4 md:px-6">
             <div className="container mx-auto max-w-3xl">
                 <div className="text-center mb-16">
-                    <h1 className="text-3xl font-primary text-purple-600 mb-3">
+                    <h1 className="text-4xl font-headings font-bold text-gray-800 mb-3">
                         The Timeless Web Blog
                     </h1>
-                    <p className="text-gray-500 text-base">
+                    <p className="text-gray-600 text-base">
                         Practical insights on web design and growing your
                         business online.
                     </p>

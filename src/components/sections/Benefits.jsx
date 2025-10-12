@@ -42,7 +42,7 @@ export default function Benefits() {
                         <div className="bg-purple-100 text-purple-600 font-semibold text-sm px-4 py-1 rounded-full mb-2">
                             What We Do
                         </div>
-                        <h2 className="font-primary font-semibold text-gray-900 text-3xl lg:text-4xl text-center">
+                        <h2 className="text-3xl font-headings font-bold text-gray-800 lg:text-4xl text-center">
                             We Handle the Tech, So You Don&apos;t Have To.
                         </h2>
                         <p className="font-text text-lg text-cente text-gray-600">

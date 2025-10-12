@@ -1,6 +1,6 @@
 // src/components/sections/Reviews.jsx
-'use client';
-import { Star } from 'lucide-react';
+"use client";
+import { Star } from "lucide-react";
 
 export default function Reviews() {
     return (
@@ -11,7 +11,7 @@ export default function Reviews() {
                         <div className="bg-purple-100 text-purple-600 font-semibold text-sm px-4 py-1 rounded-full mb-2">
                             Testimonials
                         </div>
-                        <h2 className="font-primary font-semibold text-3xl lg:text-4xl text-gray-900">
+                        <h2 className="font-headings font-bold text-3xl lg:text-4xl text-gray-800">
                             Happy & Satisfied Customers
                         </h2>
                         <p className="font-text text-lg text-center text-gray-600">

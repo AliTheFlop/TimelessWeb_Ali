@@ -1,5 +1,5 @@
-import { CheckCircle } from 'lucide-react'; // Make sure to install and import lucide-react
-import Button from '../ui/Button';
+import { CheckCircle } from "lucide-react"; // Make sure to install and import lucide-react
+import Button from "../ui/Button";
 
 export default function Explanations() {
     return (
@@ -9,7 +9,7 @@ export default function Explanations() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Text Content Column */}
                     <div className="flex flex-col gap-6 justify-center lg:pr-8">
-                        <h2 className="text-3xl md:text-4xl font-primary text-gray-900 text-center lg:text-start">
+                        <h2 className="text-3xl md:text-4xl font-headings font-bold  text-gray-800 text-center lg:text-start">
                             Your Website Should Work While You Sleep
                         </h2>
                         <p className="font-text text-lg text-gray-600 text-center lg:text-start leading-relaxed">
@@ -68,7 +68,7 @@ export default function Explanations() {
                     </div>
                     {/* Text Content Column */}
                     <div className="flex flex-col gap-6 justify-center lg:pr-8 order-1 lg:order-2">
-                        <h2 className="text-3xl md:text-4xl font-primary text-gray-900 text-center lg:text-start">
+                        <h2 className="text-3xl md:text-4xl font-headings font-bold  text-gray-800 text-center lg:text-start">
                             Spend More Time Doing What You Love.
                         </h2>
                         <p className="font-text text-lg text-gray-600 text-center lg:text-start leading-relaxed">
@@ -104,7 +104,7 @@ export default function Explanations() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                     {/* Text Content Column */}
                     <div className="flex flex-col gap-6 justify-center lg:pr-8">
-                        <h2 className="text-3xl md:text-4xl text-gray-900 font-primary text-center lg:text-start">
+                        <h2 className="text-3xl md:text-4xl font-headings font-bold  text-gray-800 text-center lg:text-start">
                             Look The Part & Earn Their Trust.
                         </h2>
                         <p className="font-text text-lg text-gray-600 text-center lg:text-start leading-relaxed">

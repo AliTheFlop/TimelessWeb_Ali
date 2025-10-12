@@ -99,17 +99,13 @@ export default function ContactForm() {
             onSubmit={handleSubmit} // onSubmit handler is used
             className="bg-white rounded px-5 py-5 w-full max-w-2xl mx-auto"
         >
-            <FormLabel
-                htmlFor="name"
-                label="Full Name"
-                hint="What do we call you?"
-            >
+            <FormLabel htmlFor="name" label="Full Name" hint="">
                 <input
                     id="name"
                     name="name"
                     type="text"
                     value={form.name}
-                    placeholder="Jack Jones"
+                    placeholder="John Doe"
                     onChange={handleChange}
                     required
                     className="mt-1 block w-full border border-gray-300 rounded px-3 py-2"
@@ -125,7 +121,7 @@ export default function ContactForm() {
             <FormLabel
                 htmlFor="contact"
                 label="Email Address" // Assuming email, as per handleContactFormSubmit default
-                hint="How will we contact you?"
+                hint=""
             >
                 <div className="relative">
                     <input
@@ -148,11 +144,7 @@ export default function ContactForm() {
                 )}
             </FormLabel>
 
-            <FormLabel
-                htmlFor="subject"
-                label="Subject"
-                hint="What can we do for you?"
-            >
+            <FormLabel htmlFor="subject" label="Subject" hint="">
                 <select
                     id="subject"
                     name="subject"
