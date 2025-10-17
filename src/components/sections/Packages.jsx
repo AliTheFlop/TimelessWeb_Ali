@@ -86,18 +86,87 @@ export default function Packages() {
         <section className="bg-white py-32">
             <div className="container mx-auto px-4">
                 {/* Title */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-headings font-bold text-gray-800 mb-3">
+                <div className="text-center mb-12 md:mb-16">
+                    <h2 className="text-3xl md:text-4xl font-headings font-bold text-gray-800">
                         Website Packages
                     </h2>
-                    <p className="text-gray-600 mt-2">
+                    <p className="text-gray-600 mt-2 text-sm md:text-base max-w-2xl mx-auto">
                         Compare features and choose the perfect plan for your
                         business.
                     </p>
                 </div>
 
-                {/* Pricing Table */}
-                <div className="overflow-x-auto">
+                {/* Mobile view: stacked cards */}
+                <div className="grid gap-8 md:hidden">
+                    {packagesData.map((pkg, idx) => (
+                        <div
+                            key={idx}
+                            className="border border-gray-200 rounded-2xl shadow-sm p-6 text-center flex flex-col items-center"
+                        >
+                            <h3 className="text-xl font-bold text-gray-800 mb-1">
+                                {pkg.name}
+                            </h3>
+                            <p className="text-purple-600 text-2xl font-bold mb-2">
+                                {pkg.price}
+                            </p>
+                            <p className="text-sm text-gray-500 mb-4">
+                                {pkg.tagline}
+                            </p>
+
+                            <div className="mb-6 ">
+                                <p className="font-medium text-gray-700 mb-2">
+                                    <span className="font-semibold">
+                                        Pages:
+                                    </span>{" "}
+                                    {pkg.pages}
+                                </p>
+                                <p className="font-medium text-gray-700 mb-2">
+                                    <span className="font-semibold">
+                                        Revisions:
+                                    </span>{" "}
+                                    {pkg.revisions}
+                                </p>
+                                {pkg.pricePerExtraPage && (
+                                    <p className="font-medium text-gray-700 mb-2">
+                                        <span className="font-semibold">
+                                            Extra page:
+                                        </span>{" "}
+                                        {pkg.pricePerExtraPage}
+                                    </p>
+                                )}
+
+                                <ul className="mt-4 space-y-2">
+                                    {Object.entries(pkg.features).map(
+                                        ([feature, enabled]) => (
+                                            <li
+                                                key={feature}
+                                                className="flex items-center gap-2 text-sm text-gray-700"
+                                            >
+                                                {enabled ? (
+                                                    <Check className="w-4 h-4 text-purple-600" />
+                                                ) : (
+                                                    <X className="w-4 h-4 text-gray-400" />
+                                                )}
+                                                {feature}
+                                            </li>
+                                        )
+                                    )}
+                                </ul>
+                            </div>
+
+                            <Button
+                                href="/contact"
+                                className="w-full"
+                                variant="secondary"
+                            >
+                                Get Started
+                            </Button>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Desktop view: comparison table */}
+                <div className="hidden md:block overflow-x-auto">
                     <table className="min-w-full border-collapse border border-gray-200 text-center">
                         <thead>
                             <tr>
@@ -172,7 +241,7 @@ export default function Packages() {
                                     >
                                         <Button
                                             href="/contact"
-                                            className="w-full"
+                                            className="w-full whitespace-nowrap"
                                             variant="secondary"
                                         >
                                             Get Started
