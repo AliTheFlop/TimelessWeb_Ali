@@ -37,7 +37,7 @@ const packagesData = [
     },
     {
         name: "5 Page Website",
-        price: "$399",
+        price: "$499",
         pages: 5,
         revisions: 3,
         pricePerExtraPage: "$40/page",
@@ -48,12 +48,12 @@ const packagesData = [
             "Free email support": true,
             "Contact form": true,
             "Basic SEO setup": true,
-            "Blog setup": true,
+            "Blog setup": false,
         },
     },
     {
         name: "Custom Website",
-        price: "$399+",
+        price: "$499+",
         pages: "Unlimited",
         revisions: "To Be Discussed",
         pricePerExtraPage: "To Be Discussed",
@@ -166,6 +166,7 @@ export default function Packages() {
                                         <Button
                                             href="/contact"
                                             className="w-full"
+                                            variant="secondary"
                                         >
                                             Get Started
                                         </Button>
@@ -174,25 +175,6 @@ export default function Packages() {
                             </tr>
                         </tbody>
                     </table>
-                </div>
-
-                {/* Custom Solution CTA */}
-                <div className="text-center mt-16">
-                    <div className="border-2 border-purple-600 rounded-xl p-8 inline-block">
-                        <h3 className="text-2xl font-bold text-gray-800">
-                            Need a custom solution?
-                        </h3>
-                        <p className="text-gray-600 my-4">
-                            We can build a website tailored to your specific
-                            needs.
-                        </p>
-                        <Link
-                            href="/contact"
-                            className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-purple-700 transition"
-                        >
-                            Contact Us
-                        </Link>
-                    </div>
                 </div>
             </div>
         </section>
