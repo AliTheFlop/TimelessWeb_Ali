@@ -1,75 +1,79 @@
-import Link from "next/link";
 import Button from "../ui/Button";
 import { Check, X, Minus } from "lucide-react";
 
 const packagesData = [
     {
-        name: "1 Page Website",
+        name: "Launch",
+        tagline:
+            "Perfect for one-page portfolios or landing pages. Delivered within 5 business days.",
         price: "$149",
         pages: 1,
         revisions: 1,
         pricePerExtraPage: null,
         features: {
-            "Mobile responsive": true,
+            "Mobile responsive design": true,
             "Professional content writing": true,
             "Stock images included": true,
             "Free email support": true,
-            "Contact form": false,
+            "Contact form": true,
             "Basic SEO setup": false,
-            "Blog setup": false,
         },
     },
     {
-        name: "3 Page Website",
-        price: "$299",
+        name: "Grow",
+        tagline:
+            "Ideal for small businesses that need a professional online presence. Delivered within 7 business days.",
+        price: "$249",
         pages: 3,
         revisions: 2,
         pricePerExtraPage: "$50/page",
         features: {
-            "Mobile responsive": true,
+            "Mobile responsive design": true,
             "Professional content writing": true,
             "Stock images included": true,
             "Free email support": true,
             "Contact form": true,
             "Basic SEO setup": true,
-            "Blog setup": false,
         },
     },
     {
-        name: "5 Page Website",
-        price: "$499",
-        pages: 5,
+        name: "Thrive",
+        tagline:
+            "For growing brands ready to level up their online experience. Delivered within 7 business days.",
+        price: "$399",
+        pages: 6,
         revisions: 3,
         pricePerExtraPage: "$40/page",
         features: {
-            "Mobile responsive": true,
+            "Mobile responsive design": true,
             "Professional content writing": true,
             "Stock images included": true,
             "Free email support": true,
             "Contact form": true,
             "Basic SEO setup": true,
-            "Blog setup": false,
         },
     },
     {
-        name: "Custom Website",
+        name: "Scale",
+        tagline:
+            "Custom solutions for ambitious businesses and evolving brands.",
         price: "$499+",
         pages: "Unlimited",
         revisions: "To Be Discussed",
         pricePerExtraPage: "To Be Discussed",
         features: {
-            "Mobile responsive": true,
+            "Mobile responsive design": true,
             "Professional content writing": true,
             "Stock images included": true,
             "Free email support": true,
             "Contact form": true,
             "Basic SEO setup": true,
             "Blog setup": true,
+            "Website strategy session": true,
         },
     },
 ];
 
-// all rows to show in order
 const featureList = [
     "Pages",
     "Revisions",
@@ -84,7 +88,7 @@ export default function Packages() {
                 {/* Title */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl font-headings font-bold text-gray-800 mb-3">
-                        Our Packages
+                        Website Packages
                     </h2>
                     <p className="text-gray-600 mt-2">
                         Compare features and choose the perfect plan for your
@@ -111,6 +115,9 @@ export default function Packages() {
                                             </span>
                                             <span className="text-purple-600 text-xl font-bold">
                                                 {pkg.price}
+                                            </span>
+                                            <span className="text-sm text-gray-500 mt-1">
+                                                {pkg.tagline}
                                             </span>
                                         </div>
                                     </th>
