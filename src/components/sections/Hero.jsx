@@ -49,9 +49,9 @@ export default function HeroSection() {
                         className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl pt-8 md:pt-0 max-w-3xl text-center md:text-left font-headings font-medium text-white leading-tight tracking-tighter"
                         variants={itemVariants}
                     >
-                        Making Your Business Look <br />{" "}
+                        Helping Your Business <br />
                         <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                            Professional{" "}
+                            Grow{" "}
                         </span>
                         Online.
                     </motion.h1>

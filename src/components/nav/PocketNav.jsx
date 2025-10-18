@@ -89,11 +89,20 @@ export default function PocketNav({ isScrolled }) {
                             Home
                         </Link>
                         <Link
-                            href="/packages"
+                            href="/website-packages"
                             onClick={handleLinkClick}
-                            className={linkClass("/packages")}
+                            className={linkClass("/website-packages")}
                         >
-                            Packages
+                            Website Packages
+                        </Link>
+                        <Link
+                            href="/social-media-management-packages"
+                            onClick={handleLinkClick}
+                            className={linkClass(
+                                "/social-media-management-packages"
+                            )}
+                        >
+                            Social Media Management Packages
                         </Link>
                         <Link
                             href="/blog"

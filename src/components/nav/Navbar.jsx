@@ -36,8 +36,19 @@ export default function Navbar({ isScrolled }) {
                     <Link href="/" className={linkClass("/")}>
                         Home
                     </Link>
-                    <Link href="/packages" className={linkClass("/packages")}>
-                        Packages
+                    <Link
+                        href="/website-packages"
+                        className={linkClass("/website-packages")}
+                    >
+                        Website Packages
+                    </Link>
+                    <Link
+                        href="/social-media-management-packages"
+                        className={linkClass(
+                            "/social-media-management-packages"
+                        )}
+                    >
+                        Social Media Management
                     </Link>
                     <Link href="/blog" className={linkClass("/blog")}>
                         Blog
