@@ -7,8 +7,11 @@ import { handleContactFormSubmit } from "@/lib/validation/handleContactForm.js";
 export default function ContactForm() {
     const [form, setForm] = useState({
         name: "",
-        contact: "", // This will be treated as email by default by handleContactFormSubmit
+        contact: "",
+        phone: "",
         subject: "",
+        websitePackage: "",
+        socialMediaPackage: "",
         message: "",
     });
 
@@ -18,7 +21,7 @@ export default function ContactForm() {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setForm((prev) => ({ ...prev, [name]: value }));
-        // Clear submit status on new input
+
         if (submitStatus) {
             setSubmitStatus(null);
         }
@@ -29,14 +32,10 @@ export default function ContactForm() {
         setIsSubmitting(true);
         setSubmitStatus(null);
 
-        // Perform local validation first (optional, but good practice)
-        // Assuming 'email' as the contactMode, adjust if your form has a toggle for phone/email
         const validationResult = handleContactFormSubmit(form, "email");
 
         if (!validationResult.success) {
             console.warn("Validation failed:", validationResult.errors);
-            // You might want to display these errors to the user
-            // For now, we'll just log them and stop submission
             setSubmitStatus({
                 type: "error",
                 message: "Please correct the errors in the form.",
@@ -46,7 +45,6 @@ export default function ContactForm() {
             return;
         }
 
-        // If local validation passes, send to Formspark
         try {
             const response = await fetch("https://api.formspark.io/k2BmGYeHC", {
                 method: "POST",
@@ -63,11 +61,13 @@ export default function ContactForm() {
                     type: "success",
                     message: "Message sent successfully!",
                 });
-                // Optionally, reset the form
                 setForm({
                     name: "",
                     contact: "",
+                    phone: "",
                     subject: "",
+                    websitePackage: "",
+                    socialMediaPackage: "",
                     message: "",
                 });
             } else {
@@ -75,8 +75,8 @@ export default function ContactForm() {
                 console.error("❌ Formspark submission error:", errorData);
                 setSubmitStatus({
                     type: "error",
-                    message: `Submission failed. If the issue persists, please try another browser.
-                    }`,
+                    message:
+                        "Submission failed. If the issue persists, please try another browser.",
                 });
             }
         } catch (error) {
@@ -96,16 +96,17 @@ export default function ContactForm() {
     return (
         <form
             id="contact-form"
-            onSubmit={handleSubmit} // onSubmit handler is used
+            onSubmit={handleSubmit}
             className="bg-white rounded px-5 py-5 w-full max-w-2xl mx-auto"
         >
+            {/* Name */}
             <FormLabel htmlFor="name" label="Full Name" hint="">
                 <input
                     id="name"
                     name="name"
                     type="text"
                     value={form.name}
-                    placeholder="John Doe"
+                    placeholder="Enter your full name"
                     onChange={handleChange}
                     required
                     className="mt-1 block w-full border border-gray-300 rounded px-3 py-2"
@@ -118,11 +119,8 @@ export default function ContactForm() {
                 )}
             </FormLabel>
 
-            <FormLabel
-                htmlFor="contact"
-                label="Email Address" // Assuming email, as per handleContactFormSubmit default
-                hint=""
-            >
+            {/* Email */}
+            <FormLabel htmlFor="contact" label="Email Address" hint="">
                 <div className="relative">
                     <input
                         id="contact"
@@ -130,9 +128,9 @@ export default function ContactForm() {
                         value={form.contact}
                         onChange={handleChange}
                         required
-                        type="email" // Assuming email
+                        type="email"
                         autoComplete="email"
-                        placeholder="you@example.com"
+                        placeholder="Enter your email"
                         className="mt-1 block w-full border border-gray-300 rounded px-3 py-2 pr-12"
                         disabled={isSubmitting}
                     />
@@ -144,7 +142,22 @@ export default function ContactForm() {
                 )}
             </FormLabel>
 
-            <FormLabel htmlFor="subject" label="Subject" hint="">
+            {/* Phone (optional) */}
+            <FormLabel htmlFor="phone" label="Phone Number (optional)" hint="">
+                <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={form.phone}
+                    onChange={handleChange}
+                    placeholder="Enter your phone number"
+                    className="mt-1 block w-full border border-gray-300 rounded px-3 py-2"
+                    disabled={isSubmitting}
+                />
+            </FormLabel>
+
+            {/* Service Selection */}
+            <FormLabel htmlFor="subject" label="Service Needed" hint="">
                 <select
                     id="subject"
                     name="subject"
@@ -160,6 +173,9 @@ export default function ContactForm() {
                     <option value="web-design">Web Design</option>
                     <option value="hosting">Hosting</option>
                     <option value="maintenance">Maintenance</option>
+                    <option value="social-media">
+                        Social Media Management
+                    </option>
                     <option value="other">Other</option>
                 </select>
                 {submitStatus?.errors?.subject && (
@@ -169,7 +185,59 @@ export default function ContactForm() {
                 )}
             </FormLabel>
 
-            <FormLabel htmlFor="message" label="Additional Details">
+            {/* Website Package */}
+            {form.subject === "web-design" && (
+                <FormLabel
+                    htmlFor="websitePackage"
+                    label="Website Package"
+                    hint=""
+                >
+                    <select
+                        id="websitePackage"
+                        name="websitePackage"
+                        value={form.websitePackage}
+                        onChange={handleChange}
+                        className="mt-1 block w-full border border-gray-300 rounded px-3 py-2"
+                        disabled={isSubmitting}
+                    >
+                        <option value="" disabled>
+                            Select a package
+                        </option>
+                        <option value="launch">Launch ($149)</option>
+                        <option value="grow">Grow ($249)</option>
+                        <option value="thrive">Thrive ($399)</option>
+                        <option value="scale">Scale ($499+)</option>
+                    </select>
+                </FormLabel>
+            )}
+
+            {/* Social Media Package */}
+            {form.subject === "social-media" && (
+                <FormLabel
+                    htmlFor="socialMediaPackage"
+                    label="Social Media Package"
+                    hint=""
+                >
+                    <select
+                        id="socialMediaPackage"
+                        name="socialMediaPackage"
+                        value={form.socialMediaPackage}
+                        onChange={handleChange}
+                        className="mt-1 block w-full border border-gray-300 rounded px-3 py-2"
+                        disabled={isSubmitting}
+                    >
+                        <option value="" disabled>
+                            Select a package
+                        </option>
+                        <option value="starter">Starter ($69/mo)</option>
+                        <option value="growth">Growth ($99/mo)</option>
+                        <option value="pro">Pro ($129/mo)</option>
+                    </select>
+                </FormLabel>
+            )}
+
+            {/* Message */}
+            <FormLabel htmlFor="message" label="Additional Details" hint="">
                 <textarea
                     id="message"
                     name="message"
@@ -188,10 +256,12 @@ export default function ContactForm() {
                 )}
             </FormLabel>
 
+            {/* Submit Button */}
             <Button type="submit" disabled={isSubmitting}>
                 {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
 
+            {/* Status Message */}
             {submitStatus && (
                 <p
                     className={`mt-4 text-sm ${
