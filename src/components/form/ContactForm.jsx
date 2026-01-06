@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Button from "@/components/ui/Button";
 import FormLabel from "@/components/form/FormLabel";
 import { handleContactFormSubmit } from "@/lib/validation/handleContactForm.js"; // Ensure this import is present
 
 export default function ContactForm() {
+    const router = useRouter();
     const [form, setForm] = useState({
         name: "",
         contact: "",
@@ -57,10 +59,8 @@ export default function ContactForm() {
 
             if (response.ok) {
                 console.log("✅ Form submitted successfully to Formspark!");
-                setSubmitStatus({
-                    type: "success",
-                    message: "Message sent successfully!",
-                });
+                router.push("/thank-you"); // Redirect to Thank You page
+
                 setForm({
                     name: "",
                     contact: "",
@@ -264,11 +264,10 @@ export default function ContactForm() {
             {/* Status Message */}
             {submitStatus && (
                 <p
-                    className={`mt-4 text-sm ${
-                        submitStatus.type === "success"
-                            ? "text-green-600"
-                            : "text-red-600"
-                    }`}
+                    className={`mt-4 text-sm ${submitStatus.type === "success"
+                        ? "text-green-600"
+                        : "text-red-600"
+                        }`}
                 >
                     {submitStatus.message}
                 </p>
